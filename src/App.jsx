@@ -5,7 +5,7 @@ import SocialCard from "./SocialCard";
 function App() {
   const [allUsers, setAllUsers] = useState([]);
   const [users, setUsers] = useState([]);
-
+    
 //I know it's not async but I'm trying new methods
   useEffect(() => {
     (async () => {
