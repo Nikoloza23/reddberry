@@ -1,7 +1,7 @@
 {
   "name": "myexampleapp",
   "version": "0.1.0",
-  "homepage": "http://Nikoloza23.github.io/react-user-cards.git",
+  "homepage": "https://github.com/Nikoloza23/react-user-cards",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
