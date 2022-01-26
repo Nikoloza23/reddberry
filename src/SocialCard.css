@@ -2,7 +2,7 @@
     margin: 2rem 2rem 2rem 2rem;
     Padding: 1.5rem;
     width: 280px;
-    box-shadow: 0 0 28px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 0 28px 4px rgba(126, 122, 122, 0.1);
     transition: transform .2s ease;
     cursor: pointer;
 }
@@ -23,5 +23,15 @@
 
 .card_image img{
     border-radius: 50%;
-    
 }
+
+@media only screen and (max-width: 500px) {
+    .card{
+      flex-direction: column;
+      padding: 3rem;
+    }
+    .card_image{
+       padding: 10px 10px;
+       
+    }
+  }
