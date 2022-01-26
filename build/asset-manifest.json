@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/react-user-cards.git/static/css/main.719dc666.chunk.css",
-    "main.js": "/react-user-cards.git/static/js/main.c34bd5fc.chunk.js",
-    "main.js.map": "/react-user-cards.git/static/js/main.c34bd5fc.chunk.js.map",
-    "runtime-main.js": "/react-user-cards.git/static/js/runtime-main.cc596785.js",
-    "runtime-main.js.map": "/react-user-cards.git/static/js/runtime-main.cc596785.js.map",
-    "static/js/2.32e86c73.chunk.js": "/react-user-cards.git/static/js/2.32e86c73.chunk.js",
-    "static/js/2.32e86c73.chunk.js.map": "/react-user-cards.git/static/js/2.32e86c73.chunk.js.map",
-    "index.html": "/react-user-cards.git/index.html",
-    "static/css/main.719dc666.chunk.css.map": "/react-user-cards.git/static/css/main.719dc666.chunk.css.map",
-    "static/js/2.32e86c73.chunk.js.LICENSE.txt": "/react-user-cards.git/static/js/2.32e86c73.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.719dc666.chunk.css",
+    "main.js": "/static/js/main.c34bd5fc.chunk.js",
+    "main.js.map": "/static/js/main.c34bd5fc.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.634167ff.js",
+    "runtime-main.js.map": "/static/js/runtime-main.634167ff.js.map",
+    "static/js/2.32e86c73.chunk.js": "/static/js/2.32e86c73.chunk.js",
+    "static/js/2.32e86c73.chunk.js.map": "/static/js/2.32e86c73.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.719dc666.chunk.css.map": "/static/css/main.719dc666.chunk.css.map",
+    "static/js/2.32e86c73.chunk.js.LICENSE.txt": "/static/js/2.32e86c73.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.cc596785.js",
+    "static/js/runtime-main.634167ff.js",
     "static/js/2.32e86c73.chunk.js",
     "static/css/main.719dc666.chunk.css",
     "static/js/main.c34bd5fc.chunk.js"
