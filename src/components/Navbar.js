@@ -4,9 +4,9 @@ function Navbar() {
   return (
     <div className="row">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="fdfsfdsfdsfd">
-          Navbar
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="#">
+          COLLECTION
         </a>
         <button
           class="navbar-toggler"
@@ -20,7 +20,7 @@ function Navbar() {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
                 className="nav-link active"
@@ -32,60 +32,33 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="fdsffdsdf">
-                Link
+                Products
               </a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link disabled" href="fdfdfd">
-                Disabled
+              <a className="nav-link" href="fdsffdsdf">
+                About
               </a>
             </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="http"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
+
+            <li className="nav-item">
+              <a className="nav-link" href="fdsffdsdf">
+                Contact
               </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a className="dropdown-item" href="fdfdfd">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="fdfdfddf">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider"></hr>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="fdsfssfd">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
             </li>
           </ul>
-          <form className="d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-          ;
+          
+          <div className='buttons'>
+            <a href="#" className="btn btn-outline-dark">
+              <i className="fa fa-sign-in me-1"></i>Login</a>
+              <a href="#" className="btn btn-outline-dark ms-2">
+              <i className="fa fa-user-plus me-1"></i> Registrer</a>  
+              
+              <a href="#" className="btn btn-outline-dark ms-2">
+              <img src="../icon/Vector.svg" ></img> Cart (0)</a>
+          </div>
+
         </div>
       </div>
     </nav>
