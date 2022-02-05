@@ -3,7 +3,7 @@ import React from 'react'
 function Navbar() {
   return (
     <div className="row">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
       <div class="container">
         <a class="navbar-brand fw-bold fs-4" href="#">
           COLLECTION
@@ -56,7 +56,7 @@ function Navbar() {
               <i className="fa fa-user-plus me-1"></i> Registrer</a>  
               
               <a href="#" className="btn btn-outline-dark ms-2">
-              <img src="../icon/Vector.svg" ></img> Cart (0)</a>
+              <i className="fa fa-shopping-cart me-1"></i> Cart (0)</a>
           </div>
 
         </div>
