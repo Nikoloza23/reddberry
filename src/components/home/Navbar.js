@@ -17,7 +17,7 @@ function Navbar() {
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <NavLink className="nav-link" to='/products'>
-                Clothes
+                CLOTHES
               </NavLink>
             </li>
           </ul>
