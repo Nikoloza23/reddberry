@@ -3,6 +3,7 @@ import Icon from '../../Icon/Vector.svg';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
+
 function Navbar() {
    
   const state = useSelector((state) => state)
@@ -16,23 +17,7 @@ function Navbar() {
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <NavLink className="nav-link" to='/products'>
-                MEN
-              </NavLink>
-            </li>
-          </ul>
-
-          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <NavLink className="nav-link" to='/products'>
-                WOMEN 
-              </NavLink>
-            </li>
-          </ul>
-
-          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <NavLink className="nav-link" to='/products'>
-                KID 
+                Clothes
               </NavLink>
             </li>
           </ul>
