@@ -1,25 +1,16 @@
-import React from 'react'
-import './App.css'
-import Navbar from './components/home/Navbar'
-import {Routes, Route} from 'react-router-dom'
-import Products from './components/products/Products';
-import Product from './components/products/Product';
-import Cart from './components/cart/Cart';
-
+import React from "react";
+import { Route, Routes } from "react-router";
+import "./App.css";
+import Home from "./pages/Home";
 
 function App() {
-   return (
-     <div className="App">
-    <Navbar />
-     <Routes>
-      <Route path='/products' element={<Products/>} /> 
-      <Route path='/products/:id' element={<Product/>} /> 
-      <Route path='/cart' element={<Cart/>} /> 
-     </Routes>
+  return (
+    <div className="App">
+      <Routes>
+       <Route path="/" element={<Home/>} />
+      </Routes>
     </div>
   );
 }
 
-
 export default App;
-
