@@ -53,12 +53,17 @@ img {
   line-height: 29px;
 }
 
-a.sub {
+.sub {
   font-size: 24px;
   line-height: 29px;
   color: #fff;
   font-family: Montserrat;
   cursor: pointer;
+}
+
+.sub:hover{
+  cursor: pointer;
+  color: blue;
 }
 
 .rocket {
