@@ -61,11 +61,6 @@ img {
   cursor: pointer;
 }
 
-.sub:hover{
-  cursor: pointer;
-  color: blue;
-}
-
 .rocket {
   position: relative;
   width: 300px;

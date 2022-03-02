@@ -12,13 +12,11 @@ function Background() {
       </div>
       <div className="components">
         <div className="title">Welcome Rocketeer!</div>
-        <Link to="/firstPage" style={{ "textDecoration": "none" }}>
+        <Link to="/firstPage" style={{ textDecoration: "none" }}>
           <div className="start">Start Questionarie</div>
         </Link>
         <div className="submited">
-          <div className="sub">
-            Submited Applications
-          </div>
+          <div className="sub">Submited Applications</div>
         </div>
         <div>
           <img className="rocket" src={rocketman} alt="/" />

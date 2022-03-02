@@ -1,0 +1,51 @@
+.circle_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 25px;
+  cursor: pointer;
+}
+
+span.dot {
+  height: 19px;
+  width: 19px;
+  background-color: bisque;
+  border-radius: 50%;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+span.dot:hover {
+  cursor: pointer;
+  background: #fe3b1f;
+  transform: scale(1.5);
+}
+
+.previouses {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img.left {
+  position: relative;
+  margin-left: 0px;
+  margin-top: -60px;
+  background: none;
+  height: 19px;
+  width: 19px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+img.right {
+  position: relative;
+  margin-left: 260px;
+  margin-top: -60px;
+  background: none;
+  height: 19px;
+  width: 19px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}

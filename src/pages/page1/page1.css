@@ -27,17 +27,20 @@
 }
 
 .rocketer {
-  margin-top: -320px;
-  width: 550px;
+  display: flex;
+  align-items: center;
+  margin-top: -300px;
+  width: 500px;
   font-family: Rowdies;
   color: #fe3b1f;
   line-height: 59px;
-  margin-left: -50px;
   font-size: 50px;
 }
 
 .reddbery_origins {
-  margin-top: -300px;
+  display: flex;
+  justify-content: center;
+  margin-top: -280px;
   width: 550px;
   font-family: Rowdies;
   color: #fe3b1f;
@@ -48,27 +51,33 @@
 
 .content {
   position: absolute;
+  top: -200px;
   color: #fff;
-  font-family: Montserrat;
   font-size: 24px;
-  top: -150px;
-  width: 575px;
+  padding: 70px;
+  width: 550px;
+  text-align: justify;
+  left: -10px;
+}
+
+.form_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 220px;
+  flex-direction: column;
 }
 
 input.form-input {
   flex-direction: column;
-  margin-top: 100px;
-  display: block;
-  padding-left: 10px;
-  outline: none;
-  border-radius: 2px;
+  margin: 15px;
+  padding-left: 30px;
   height: 40px;
-  width: 455px;
+  width: 350px;
   border: 1px solid black;
   font-family: Montserrat;
   font-style: italic;
   font-size: 20px;
-  align-items: center;
 }
 
 .form_inputs {
