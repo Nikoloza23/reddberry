@@ -1,0 +1,21 @@
+.rocketer_2{
+  margin-top: -300px;
+  width: 788px;
+  font-family: Rowdies;
+  color: #fe3b1f;
+  line-height: 100px;
+  font-size: 50px;
+}
+
+.reddbery_origin_2{
+  display: flex;
+  justify-content: center;
+  margin-top: -280px;
+  width: 788px;
+  height: 175px;
+  font-family: Rowdies;
+  color: #fe3b1f;
+  line-height: 60px;
+  margin-left: -50px;
+  font-size: 50px;
+}
