@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Pagination from '../../components/pagination/Pagination';
 import './page2.css';
+import axios from 'axios';
 
 function Page2() {
+	const [skills, setSkills] = useState([]);
+
+
+	useEffect(() => {
+		axios
+			.get('https://bootcamp-2022.devtest.ge/api/skills')
+			.then((res) => {
+				console.log(res);
+				setSkills(res.data);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	}, []);
+
 	return (
 		<div className="split_2">
 			<div className="split left">
@@ -12,9 +28,10 @@ function Page2() {
 						<div className="form_input_2">
 							<input className="form-input" type="text" name="username" placeholder="Skills" />
 							<select className="selector">
-								<option className="skills">React</option>
-								<option className="skills">HtML</option>
-								<option className="skills">CSS</option>
+									{skills.map((skill) => (
+										<option className="skills" key={skill.id}>{skill.title}</option>
+									))}
+								
 							</select>
 						</div>
 						<div className="form_input">
@@ -25,10 +42,18 @@ function Page2() {
 								placeholder="Experience Duration in Years"
 							/>
 						</div>
+						<div className="add_duration">Add Programming Language</div>
 					</div>
-					<div className="add_duration">Add Programming Language</div>
-					<div></div>
-					<div></div>
+					<div className="form_inputs">
+						<input className="form-input_2" type="text" name="username" placeholder="HTML" />
+						<div className="experience">Years of Experience 3</div>
+						<div className="remove">-</div>
+					</div>
+					<div className="form_input">
+						<input className="form-input_2" type="text" name="username" placeholder="CSS" />
+						<div className="experience">Years of Experience 3</div>
+						<div className="remove">-</div>
+					</div>
 					<Pagination />
 				</div>
 				<div className="split right">

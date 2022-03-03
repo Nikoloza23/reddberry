@@ -7,13 +7,15 @@ const Pagination = () => {
 	return (
 		<div>
 			<div className="circle_container">
-				<Link to="/firstPage" style={{ textDecoration: 'none', 'marginTop': '8px' }}>
+				<Link to="/firstPage" style={{ textDecoration: 'none', marginTop: '8px' }}>
 					<span className="dot"></span>
 				</Link>
-				<Link to="/secondPage" style={{ textDecoration: 'none', 'marginTop': '8px' }}>
+				<Link to="/secondPage" style={{ textDecoration: 'none', marginTop: '8px' }}>
 					<span className="dot"></span>
 				</Link>
-				<span className="dot"></span>
+				<Link to="/thirdPage" style={{ textDecoration: 'none', marginTop: '8px' }}>
+					<span className="dot"></span>
+				</Link>
 				<span className="dot"></span>
 				<span className="dot"></span>
 				<span className="dot"></span>

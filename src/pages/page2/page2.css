@@ -1,10 +1,12 @@
 .rocketer_2 {
-	margin-top: -300px;
+	position: relative;
+	margin-top: -25px;
 	width: 788px;
 	font-family: Rowdies;
 	color: #fe3b1f;
 	line-height: 100px;
 	font-size: 50px;
+	top: 40px;
 }
 
 .reddbery_origin_2 {
@@ -31,12 +33,22 @@
 	left: 30px;
 }
 
+.remove{
+	position: relative;
+	width: 50px;
+	height: 15px;
+	background: none;
+	margin-left: 500px;
+	top: -500px;
+	color: #fe3b1f;	
+}
+
 .form_container_2 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-top: 50px;
-	gap: 15px;
+	gap: 2px;
 	flex-direction: column;
 }
 
@@ -65,10 +77,53 @@ option.skills {
 	height: 40px;
 	align-items: center;
 	justify-content: center;
-	margin-left: 200px;
+	margin-left: 140px;
 	border: 1px solid #fe3b1f;
-	margin-left: 360px;
 	background-color: #fe3b1f;
 	color: #fff;
 	cursor: pointer;
+	margin-top: 20px;
+}
+
+
+.form_inputs{
+	margin-top: 20px;
+	margin-bottom: -25px;
+}
+
+.form-input_2{
+	flex-direction: column;
+	margin: 15px;
+	padding-left: 30px;
+	height: 40px;
+	width: 350px;
+	border: 1px solid black;
+	font-family: Montserrat;
+	font-style: italic;
+	font-size: 20px;
+	margin-bottom: 5px;
+  }
+
+  .experience{
+	position: relative;
+	top: -35px;
+	font-family: Monsterant;
+	font-size: 14px;
+	font-style: italic;
+  }
+
+  .remove {
+    display: flex;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: none;
+    margin-left: 530px;
+    top: -55px;
+    color: #fe3b1f;
+    border: 1px solid #fe3b1f;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
