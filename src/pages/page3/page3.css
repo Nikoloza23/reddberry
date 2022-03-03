@@ -1,0 +1,111 @@
+.all {
+	margin-top: -68px;
+}
+
+.rocketer_3 {
+	position: relative;
+	margin-top: -380px;
+	width: 788px;
+	font-family: Rowdies;
+	color: #fe3b1f;
+	line-height: 100px;
+	font-size: 54px;
+	top: 40px;
+}
+
+.topping {
+	margin-top: 0.5rem;
+}
+
+.work {
+	margin-top: 130px;
+	width: 645px;
+	height: 52px;
+	font-family: Montserrat;
+	margin-left: 100px;
+	font-size: 18px;
+	color: #000000;
+	margin-bottom: -25px;
+}
+
+.checkbox {
+	position: relative;
+	margin-left: 100px;
+	width: 12px;
+	height: 12px;
+}
+
+.change {
+	position: relative;
+	font-size: 14px;
+	font-family: Monsterrant;
+	line-height: 17.5px;
+	margin-left: 130px;
+	top: -20px;
+	margin-bottom: -13px;
+}
+
+.work_2 {
+	margin-left: 100px;
+	margin-bottom: 5px;
+	color: #000000;
+}
+
+.when {
+	margin-left: 100px;
+	font-size: 18px;
+	color: #000000;
+}
+
+.form-input_3 {
+	flex-direction: column;
+	margin: 15px;
+	padding-left: 30px;
+	height: 30px;
+	width: 270px;
+	border: 1px solid black;
+	font-family: Montserrat;
+	font-style: italic;
+	font-size: 20px;
+	margin-bottom: 15px;
+	margin-left: 100px;
+}
+
+.text {
+	margin-left: 100px;
+	font-size: 18px;
+	font-family: Montserrat;
+	color: #000000;
+}
+
+.last {
+	margin-left: 100px;
+	font-size: 18px;
+	font-family: Monsterrant;
+	color: #000000;
+}
+
+.reddbery_origin_3 {
+	display: flex;
+	justify-content: center;
+	margin-top: -320px;
+	width: 788px;
+	height: 175px;
+	font-family: Rowdies;
+	color: #fe3b1f;
+	line-height: 60px;
+	margin-left: -50px;
+	font-size: 50px;
+}
+
+.content_3 {
+	position: absolute;
+	top: -200px;
+	color: #fff;
+	font-size: 24px;
+	padding: 70px;
+	width: 650px;
+	text-align: justify;
+	left: 30px;
+	margin-top: -50px;
+}

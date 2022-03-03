@@ -6,16 +6,13 @@ import axios from 'axios';
 function Page2() {
 	const [skills, setSkills] = useState([]);
 
-
 	useEffect(() => {
 		axios
 			.get('https://bootcamp-2022.devtest.ge/api/skills')
 			.then((res) => {
-				console.log(res);
 				setSkills(res.data);
 			})
 			.catch((err) => {
-				console.log(err);
 			});
 	}, []);
 
@@ -28,10 +25,11 @@ function Page2() {
 						<div className="form_input_2">
 							<input className="form-input" type="text" name="username" placeholder="Skills" />
 							<select className="selector">
-									{skills.map((skill) => (
-										<option className="skills" key={skill.id}>{skill.title}</option>
-									))}
-								
+								{skills.map((skill) => (
+									<option className="skills" key={skill.id}>
+										{skill.title}
+									</option>
+								))}
 							</select>
 						</div>
 						<div className="form_input">

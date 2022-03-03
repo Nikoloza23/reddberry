@@ -1,82 +1,81 @@
 .split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+	height: 100%;
+	width: 50%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	overflow-x: hidden;
+	padding-top: 20px;
 }
 
 .left {
-  left: 0;
-  background-color: #fff;
+	left: 0;
+	background-color: #fff;
 }
 
 .right {
-  right: 0;
-  background-color: #151718;
+	right: 0;
+	background-color: #151718;
 }
 
 .centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
 .rocketer {
-  display: flex;
-  align-items: center;
-  margin-top: -300px;
-  width: 500px;
-  font-family: Rowdies;
-  color: #fe3b1f;
-  line-height: 59px;
-  font-size: 50px;
+	display: flex;
+	align-items: center;
+	margin-top: -300px;
+	width: 500px;
+	font-family: Rowdies;
+	color: #fe3b1f;
+	line-height: 59px;
+	font-size: 50px;
 }
 
 .reddbery_origins {
-  display: flex;
-  justify-content: center;
-  margin-top: -280px;
-  width: 550px;
-  font-family: Rowdies;
-  color: #fe3b1f;
-  line-height: 59px;
-  margin-left: -50px;
-  font-size: 50px;
+	display: flex;
+	justify-content: center;
+	margin-top: -280px;
+	width: 550px;
+	font-family: Rowdies;
+	color: #fe3b1f;
+	line-height: 59px;
+	margin-left: -50px;
+	font-size: 50px;
 }
 
 .content {
-  position: absolute;
-  top: -200px;
-  color: #fff;
-  font-size: 24px;
-  padding: 70px;
-  width: 550px;
-  text-align: justify;
-  left: -10px;
+	position: absolute;
+	top: -200px;
+	color: #fff;
+	font-size: 24px;
+	padding: 70px;
+	width: 550px;
+	text-align: justify;
+	left: -10px;
 }
 
 .form_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 220px;
-  flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 220px;
+	flex-direction: column;
 }
 
 input.form-input {
-  flex-direction: column;
-  margin: 15px;
-  padding-left: 30px;
-  height: 40px;
-  width: 350px;
-  border: 1px solid black;
-  font-family: Montserrat;
-  font-style: italic;
-  font-size: 20px;
+	flex-direction: column;
+	margin: 15px;
+	padding-left: 30px;
+	height: 40px;
+	width: 350px;
+	border: 1px solid black;
+	font-family: Montserrat;
+	font-style: italic;
+	font-size: 20px;
 }
-

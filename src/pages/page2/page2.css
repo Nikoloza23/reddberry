@@ -33,14 +33,14 @@
 	left: 30px;
 }
 
-.remove{
+.remove {
 	position: relative;
 	width: 50px;
 	height: 15px;
 	background: none;
 	margin-left: 500px;
 	top: -500px;
-	color: #fe3b1f;	
+	color: #fe3b1f;
 }
 
 .form_container_2 {
@@ -85,13 +85,12 @@ option.skills {
 	margin-top: 20px;
 }
 
-
-.form_inputs{
+.form_inputs {
 	margin-top: 20px;
 	margin-bottom: -25px;
 }
 
-.form-input_2{
+.form-input_2 {
 	flex-direction: column;
 	margin: 15px;
 	padding-left: 30px;
@@ -102,28 +101,28 @@ option.skills {
 	font-style: italic;
 	font-size: 20px;
 	margin-bottom: 5px;
-  }
+}
 
-  .experience{
+.experience {
 	position: relative;
 	top: -35px;
 	font-family: Monsterant;
 	font-size: 14px;
 	font-style: italic;
-  }
+}
 
-  .remove {
-    display: flex;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    background: none;
-    margin-left: 530px;
-    top: -55px;
-    color: #fe3b1f;
-    border: 1px solid #fe3b1f;
-    border-radius: 20px;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+.remove {
+	display: flex;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	background: none;
+	margin-left: 530px;
+	top: -55px;
+	color: #fe3b1f;
+	border: 1px solid #fe3b1f;
+	border-radius: 20px;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
 }
