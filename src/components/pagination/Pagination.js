@@ -16,8 +16,9 @@ const Pagination = () => {
 				<Link to="/thirdPage" style={{ textDecoration: 'none', marginTop: '8px' }}>
 					<span className="dot"></span>
 				</Link>
-				<span className="dot"></span>
-				<span className="dot"></span>
+				<Link to="/fourthPage" style={{ textDecoration: 'none', marginTop: '8px' }}>
+					<span className="dot"></span>
+				</Link>
 				<span className="dot"></span>
 			</div>
 			<div className="previouses">

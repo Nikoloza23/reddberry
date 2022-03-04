@@ -29,23 +29,23 @@ span.dot:hover {
 }
 
 img.left {
-	position: relative;
-	margin-left: 0px;
-	margin-top: -60px;
-	background: none;
-	height: 19px;
-	width: 19px;
-	border-radius: 50%;
-	transition: transform 0.2s;
+    position: relative;
+    margin-left: 40px;
+    margin-top: -57px;
+    background: none;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
 }
 
+
 img.right {
-	position: relative;
-	margin-left: 260px;
-	margin-top: -60px;
-	background: none;
-	height: 19px;
-	width: 19px;
-	border-radius: 50%;
-	transition: transform 0.2s;
+    position: relative;
+    margin-left: 260px;
+    margin-top: -58px;
+    background: none;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    left: -40px;
 }
