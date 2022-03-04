@@ -19,7 +19,9 @@ const Pagination = () => {
 				<Link to="/fourthPage" style={{ textDecoration: 'none', marginTop: '8px' }}>
 					<span className="dot"></span>
 				</Link>
-				<span className="dot"></span>
+				<Link to="/submitPage" style={{ textDecoration: 'none', marginTop: '8px' }}>
+					<span className="dot"></span>
+				</Link>
 			</div>
 			<div className="previouses">
 				<div>
