@@ -3,8 +3,9 @@
 	align-items: center;
 	justify-content: center;
 	height: 657px;
-    position: relative;;
+    position: relative;
 	background: #151718;
+    overflow: hidden;
 }
 
 .submit {

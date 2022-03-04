@@ -1,6 +1,7 @@
 .all {
-	margin-top: -75px;
+	margin-top: -60px;
 	position: relative;
+	top: 40px;
 }
 
 .rocketer_3 {
@@ -19,6 +20,7 @@
 }
 
 .work {
+	position: relative;
 	margin-top: 120px;
 	width: 645px;
 	height: 52px;
@@ -27,6 +29,7 @@
 	font-size: 18px;
 	color: #000000;
 	margin-bottom: -25px;
+	top: 10px;
 }
 
 .checkbox {

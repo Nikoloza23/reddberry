@@ -81,8 +81,8 @@ function Page3() {
 					<div className="form_input">
 						<input className="form-input_3" type="text" placeholder="Done" />
 					</div>
-					<Pagination />
 				</div>
+				<Pagination />
 			</div>
 			<div className="split right">
 				<div className="centered">
