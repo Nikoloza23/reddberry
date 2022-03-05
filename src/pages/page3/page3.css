@@ -1,7 +1,7 @@
 .all {
-	margin-top: -60px;
 	position: relative;
-	top: 40px;
+	margin-top: -50px;
+	top: 30px;
 }
 
 .rocketer_3 {
@@ -12,7 +12,7 @@
 	color: #fe3b1f;
 	line-height: 100px;
 	font-size: 54px;
-	top: 40px;
+	top: 10px;
 }
 
 .topping {
@@ -59,20 +59,31 @@
 	margin-left: 100px;
 	font-size: 18px;
 	color: #000000;
+	margin-bottom: 15px;
 }
 
-.form-input_3 {
-	flex-direction: column;
-	margin: 15px;
-	padding-left: 30px;
-	height: 30px;
-	width: 270px;
-	border: 1px solid black;
-	font-family: Montserrat;
-	font-style: italic;
-	font-size: 20px;
-	margin-bottom: 15px;
+input#form-input_3 {
 	margin-left: 100px;
+	border: 1px solid black;
+	width: 230px;
+	margin-bottom: 25px;
+	font-size: 18px;
+	font-family: Monsterrant;
+}
+
+input.form-input_3 {
+	margin-left: 100px;
+	border: 1px solid black;
+	width: 230px;
+	margin-bottom: 8px;
+	font-size: 18px;
+	font-family: Monsterrant;
+}
+
+button.isTogled {
+    background: white;
+    border: 1px;
+    padding: 0;
 }
 
 .text {
@@ -80,6 +91,7 @@
 	font-size: 18px;
 	font-family: Montserrat;
 	color: #000000;
+	margin-bottom: 15px;
 }
 
 .last {
@@ -87,6 +99,7 @@
 	font-size: 18px;
 	font-family: Monsterrant;
 	color: #000000;
+	margin-bottom: 15px;
 }
 
 .reddbery_origin_3 {
@@ -113,4 +126,3 @@
 	left: 30px;
 	margin-top: -50px;
 }
-

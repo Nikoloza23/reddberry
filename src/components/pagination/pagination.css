@@ -2,18 +2,21 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-left: -150px;
 	margin-top: 50px;
 	gap: 25px;
 	cursor: pointer;
 }
 
 span.dot {
+	position: relative;
 	height: 19px;
 	width: 19px;
 	background-color: bisque;
 	border-radius: 50%;
 	display: inline-block;
 	transition: transform 0.2s;
+   left: 250px;
 }
 
 span.dot:hover {
@@ -28,24 +31,26 @@ span.dot:hover {
 	justify-content: center;
 }
 
+
 img.left {
     position: relative;
-    margin-left: 40px;
-    margin-top: -57px;
+    margin-right: 50px;
     background: none;
     height: 19px;
     width: 19px;
     border-radius: 50%;
+	cursor: pointer;
 }
+
 
 
 img.right {
     position: relative;
     margin-left: 260px;
-    margin-top: -58px;
     background: none;
     height: 19px;
     width: 19px;
     border-radius: 50%;
-    left: -40px;
+    left: -90px;
+	cursor: pointer;
 }

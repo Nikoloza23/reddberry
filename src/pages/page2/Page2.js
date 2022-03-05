@@ -1,9 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import Pagination from '../../components/pagination/Pagination';
-import './page2.css';
+import { useState, useEffect, useRef } from 'react';
+import { useForm } from 'react-hook-form';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 
+import { addSkill, deleteSkill } from '../../redux/action';
+import { reduxSkills } from '../../redux/selectors';
+
+import './page2.css';
+import Pagination from '../../components/pagination/Pagination';
+
 function Page2() {
+	const formRef = useRef();
+	const dispatch = useDispatch();
+	const choosenSkills = useSelector(reduxSkills);
+	const {
+		handleSubmit,
+		register,
+		// formState: { errors },
+	} = useForm();
+
 	const [skills, setSkills] = useState([]);
 
 	useEffect(() => {
@@ -13,8 +28,15 @@ function Page2() {
 				setSkills(res.data);
 			})
 			.catch((err) => {
+				console.log(err);
 			});
 	}, []);
+
+	const onFormSubmit = (data) => {
+		console.log('technology data', data);
+
+		dispatch(addSkill({ id: Math.random(), ...data }));
+	};
 
 	return (
 		<div className="split_2">
@@ -22,36 +44,43 @@ function Page2() {
 				<div className="centered">
 					<h1 className="rocketer_2">Tell us about your skills</h1>
 					<div className="form_container_2">
-						<div className="form_input_2">
-							<select className="form-input_3">
-								<option>Skills</option>
-								{skills.map((skill) => (
-									<option className="skills" key={skill.id}>
-										{skill.title}
-									</option>
-								))}
-							</select>
+						<form id="technologyForm" onSubmit={handleSubmit(onFormSubmit)} ref={formRef}>
+							<div className="form_input_2">
+								<select className="form-input_4" {...register('skill', { required: true })}>
+									<option>Skills</option>
+									{skills &&
+										skills.map((skill) => (
+											<option className="skills" key={skill.id} value={skill.title}>
+												{skill.title}
+											</option>
+										))}
+								</select>
+							</div>
+							<div>
+								<input
+									className="duration"
+									type="number"
+									min={0}
+									id="experience"
+									placeholder="Experience Duration in Years"
+									{...register('experience', { required: true })}
+								/>
+							</div>
+						</form>
+						<button className="add_duration" form={formRef?.current?.id}>
+							Add Programming Language
+						</button>
+					</div>
+
+					{choosenSkills.map((skill) => (
+						<div className="form_inputs" key={skill.id}>
+							<div className="form-input_2">{skill.skill}</div>
+							<div className="experience">Years of Experience {skill.experience}</div>
+							<div className="remove" onClick={() => dispatch(deleteSkill(skill.id))}>
+								-
+							</div>
 						</div>
-						<div className="form_input">
-							<input
-								className="form-input"
-								type="text"
-								name="username"
-								placeholder="Experience Duration in Years"
-							/>
-						</div>
-						<div className="add_duration">Add Programming Language</div>
-					</div>
-					<div className="form_inputs">
-						<input className="form-input_2" type="text" name="username" placeholder="HTML" />
-						<div className="experience">Years of Experience 3</div>
-						<div className="remove">-</div>
-					</div>
-					<div className="form_input">
-						<input className="form-input_2" type="text" name="username" placeholder="CSS" />
-						<div className="experience">Years of Experience 3</div>
-						<div className="remove">-</div>
-					</div>
+					))}
 					<Pagination />
 				</div>
 				<div className="split right">

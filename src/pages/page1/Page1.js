@@ -17,10 +17,18 @@ function Page1() {
 						<input className="form-input" type="text" name="username" placeholder="Last Name" />
 					</div>
 					<div className="form_input">
-						<input className="form-input" type="text" name="username" placeholder="E Mail" />
+						<input className="form-input" type="email" id="email" name="email" placeholder="E Mail" />
 					</div>
 					<div className="form_input">
-						<input className="form-input" type="text" name="username" placeholder="+995 5__ __ __ __" />
+						<input
+							className="form-input"
+							type="tel"
+							id="phone"
+							name="phone"
+							pattern="[0-9]{3}[0-9]{3}-[0-9]{4}"
+							placeholder="+995 5__ __ __ __"
+							required
+						/>
 					</div>
 				</div>
 				<Pagination />

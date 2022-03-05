@@ -8,6 +8,7 @@ function Page4() {
 	return (
 		<div className="split_2">
 			<div className="split left">
+				<div className="fourth">
 				<div className="centered">
 					<h1 className="rocketer_4">What about you?</h1>
 				</div>
@@ -33,6 +34,7 @@ function Page4() {
 					<textarea className="txt" placeholder="I would..."></textarea>
 					<div className="txt_2">Tell us something special</div>
 					<textarea className="txt_3" placeholder="I..."></textarea>
+				</div>
 				</div>
 				<Pagination />
 			</div>

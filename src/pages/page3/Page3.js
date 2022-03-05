@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import Pagination from '../../components/pagination/Pagination';
+import Date from './helpers/Date';
 import './page3.css';
 
 function Page3() {
 	const [radio, setRadio] = useState();
 	const [covid, setCovid] = useState();
 	const [done, setDone] = useState();
+	const [isToggled, setIsToggled] = useState(false);
+
+	const changeToggle = (x) => {
+		setIsToggled(x);
+	};
 
 	return (
 		<div className="split_2">
 			<div className="split left">
-				<div className="centered">
-					<h1 className="rocketer_3">Covid Stuff</h1>
-				</div>
 				<div className="all">
+					<div className="centered">
+						<h1 className="rocketer_3">Covid Stuff</h1>
+					</div>
 					<div className="choosen_work">
 						<div className="work">how would you prefer to work?</div>
 					</div>
@@ -39,26 +45,30 @@ function Page3() {
 					</div>
 					<div className="work_2">Did you contact covid 19? :(</div>
 					<div className="topping">
-						<input
-							className="checkbox"
-							type="radio"
-							name="covid"
-							value="Yes"
-							onChange={(e) => setCovid(e.target.value)}
-						/>
-						<div className="change">Yes</div>
-						<input
-							className="checkbox"
-							type="radio"
-							name="covid"
-							value="No"
-							onChange={(e) => setCovid(e.target.value)}
-						/>
-						<div className="change">No</div>
-					</div>
-					<div className="when">When?</div>
-					<div className="form_input">
-						<input className="form-input_3" type="text" placeholder="Done" />
+						<button className="isTogled" onClick={() => changeToggle(true)}>
+							<input
+								className="checkbox"
+								type="radio"
+								name="covid"
+								value="Yes"
+								onChange={(e) => setCovid(e.target.value)}
+							/>
+						</button>
+						<div>
+							<button className="isTogled" onClick={() => changeToggle(false)}>
+								<div className="change">Yes</div>
+								<input
+									className="checkbox"
+									type="radio"
+									name="covid"
+									value="No"
+									onChange={(e) => setCovid(e.target.value)}
+								/>
+							</button>
+							<div className="change">No</div>
+						</div>
+						{isToggled && <Date />}
+						{isToggled}
 					</div>
 					<div className="text">Have you been vaccinated?</div>
 					<input
@@ -78,9 +88,9 @@ function Page3() {
 					/>
 					<div className="change">No</div>
 					<div className="last">When did you get your last covid vaccine?</div>
-					<div className="form_input">
-						<input className="form-input_3" type="text" placeholder="Done" />
-					</div>
+					<form>
+						<input type="date" id="form-input_3" name="form-input_3" />
+					</form>
 				</div>
 				<Pagination />
 			</div>

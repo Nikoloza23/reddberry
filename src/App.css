@@ -1,3 +1,41 @@
-input[type="radio"]{
-    accent-color: #000000;
+input[type='radio'] {
+	accent-color: #000000;
+}
+
+
+
+@media (min-width: 1920px) {
+	.form_container {
+		gap: 5px;
+	}
+	.rocketer {
+		margin-top: -300px;
+	}
+	.form-input {
+		position: relative;
+		top: 200px;
+	}
+	.circle_container {
+		position: relative;
+		top: 100px;
+	}
+	.previouses {
+		margin-top: 100px;
+	}
+	.work {
+		position: relative;
+		top: 100px;
+	}
+	.dot {
+		margin-top: 100px;
+	}
+	.all {
+		margin-left: 100px;
+		font-size: 20px;
+		font-family: Monsterrant;
+	}
+	.fourth {
+		height: 80vh;
+		margin-bottom: -150px;
+	}
 }
