@@ -2,10 +2,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 657px;
-    position: relative;
+	height: 100vh;
+    position: relative;;
 	background: #151718;
-    overflow: hidden;
 }
 
 .submit {

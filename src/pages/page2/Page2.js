@@ -23,8 +23,8 @@ function Page2() {
 					<h1 className="rocketer_2">Tell us about your skills</h1>
 					<div className="form_container_2">
 						<div className="form_input_2">
-							<input className="form-input" type="text" name="username" placeholder="Skills" />
-							<select className="selector">
+							<select className="form-input_3">
+								<option>Skills</option>
 								{skills.map((skill) => (
 									<option className="skills" key={skill.id}>
 										{skill.title}

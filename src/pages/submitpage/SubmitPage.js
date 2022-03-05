@@ -6,7 +6,7 @@ function SubmitPage() {
 	return (
 		<div className="background_2">
 			<h1 className="submit">Submit</h1>
-			<Link to="/firstPage" style={{ textDecoration: 'none' }}>
+			<Link to="/fourthPage" style={{ textDecoration: 'none' }}>
 				<h1 className="go_back">go back</h1>
 			</Link>
 		</div>

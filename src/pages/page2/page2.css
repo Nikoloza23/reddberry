@@ -103,6 +103,19 @@ option.skills {
 	margin-bottom: 5px;
 }
 
+.form-input_3{
+	flex-direction: column;
+	margin: 15px;
+	padding-left: 30px;
+	height: 40px;
+	width: 350px;
+	border: 1px solid black;
+	font-family: Montserrat;
+	font-style: italic;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
 .experience {
 	position: relative;
 	top: -35px;
