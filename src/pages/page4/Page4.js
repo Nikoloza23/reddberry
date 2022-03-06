@@ -1,42 +1,72 @@
 import React, { useState } from 'react';
 import Pagination from '../../components/pagination/Pagination';
 import './page4.css';
+import { useRef } from 'react';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 function Page4() {
 	const [talk, setTalk] = useState();
+	const formRef = useRef();
+	const navigate = useNavigate();
+
+	const {
+		register,
+		formState: { errors },
+		handleSubmit,
+	} = useForm();
+
+	const onFormSubmit = (data) => {
+		console.log(data);
+
+		navigate('/submitPage');
+	};
 
 	return (
 		<div className="split_2">
 			<div className="split left">
 				<div className="fourth">
-				<div className="centered">
-					<h1 className="rocketer_4">What about you?</h1>
+					<div className="centered">
+						<h1 className="rocketer_4">What about you?</h1>
+					</div>
+					<form onSubmit={handleSubmit(onFormSubmit)} ref={formRef} id="4">
+						<div className="devtalks">
+							<div className="devtalk">Would you attend Devtalks and maybe also organize your own?</div>
+							<input
+								className="checkbox"
+								type="radio"
+								value="Yes"
+								onChange={(e) => setTalk(e.target.value)}
+								{...register('talk', { required: true })}
+							/>
+							<div className="devtalks_answer">Yes</div>
+							<input
+								className="checkbox"
+								type="radio"
+								value="Yes"
+								onChange={(e) => setTalk(e.target.value)}
+								{...register('talk', { required: true })}
+							/>
+							<div className="devtalks_answer">No</div>
+							<div className="errors_2">{errors.talk?.type === 'required' && '* please select '}</div>
+							<div className="about">What would you speak about at Devtalk?</div>
+							<textarea
+								className="txt"
+								placeholder="I would..."
+								{...register('devtalk', { required: true })}
+							></textarea>
+							<div className="errors_2">{errors.devtalk?.type === 'required' && '* please select '}</div>
+							<div className="txt_2">Tell us something special</div>
+							<textarea
+								className="txt_3"
+								placeholder="I..."
+								{...register('about', { required: true })}
+							></textarea>
+							<div className="errors_2">{errors.about?.type === 'required' && '* please select '}</div>
+						</div>
+					</form>
 				</div>
-				<div className="devtalks">
-					<div className="devtalk">Would you attend Devtalks and maybe also organize your own?</div>
-					<input
-						className="checkbox"
-						type="radio"
-						name="talk"
-						value="Yes"
-						onChange={(e) => setTalk(e.target.value)}
-					/>
-					<div className="devtalks_answer">Yes</div>
-					<input
-						className="checkbox"
-						type="radio"
-						name="talk"
-						value="Yes"
-						onChange={(e) => setTalk(e.target.value)}
-					/>
-					<div className="devtalks_answer">No</div>
-					<div className="about">What would you speak about at Devtalk?</div>
-					<textarea className="txt" placeholder="I would..."></textarea>
-					<div className="txt_2">Tell us something special</div>
-					<textarea className="txt_3" placeholder="I..."></textarea>
-				</div>
-				</div>
-				<Pagination />
+				<Pagination formRef={formRef} />
 			</div>
 			<div className="split right">
 				<div className="centered">

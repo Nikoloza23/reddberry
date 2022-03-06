@@ -40,14 +40,16 @@ function Page2() {
 
 	return (
 		<div className="split_2">
-			<div className="split left">
+			<div className="splitleft">
 				<div className="centered">
 					<h1 className="rocketer_2">Tell us about your skills</h1>
 					<div className="form_container_2">
 						<form id="technologyForm" onSubmit={handleSubmit(onFormSubmit)} ref={formRef}>
 							<div className="form_input_2">
 								<select className="form-input_4" {...register('skill', { required: true })}>
-									<option>Skills</option>
+									<option selected disabled hidden>
+										Skills
+									</option>
 									{skills &&
 										skills.map((skill) => (
 											<option className="skills" key={skill.id} value={skill.title}>

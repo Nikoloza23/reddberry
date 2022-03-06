@@ -2,15 +2,32 @@ import React, { useState } from 'react';
 import Pagination from '../../components/pagination/Pagination';
 import Date from './helpers/Date';
 import './page3.css';
+import { useRef } from 'react';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 function Page3() {
 	const [radio, setRadio] = useState();
 	const [covid, setCovid] = useState();
 	const [done, setDone] = useState();
 	const [isToggled, setIsToggled] = useState(false);
+	const formRef = useRef();
+	const navigate = useNavigate();
 
 	const changeToggle = (x) => {
 		setIsToggled(x);
+	};
+
+	const {
+		register,
+		formState: { errors },
+		handleSubmit,
+	} = useForm();
+
+	const onFormSubmit = (data) => {
+		console.log(data);
+
+		navigate('/fourthPage');
 	};
 
 	return (
@@ -23,76 +40,86 @@ function Page3() {
 					<div className="choosen_work">
 						<div className="work">how would you prefer to work?</div>
 					</div>
-					<div className="topping">
-						<input
-							className="checkbox"
-							type="radio"
-							name="radio"
-							value="From Sairme Office"
-							onChange={(e) => setRadio(e.target.value)}
-						/>
-						<div className="change">From Sairme Office</div>
-						<input
-							className="checkbox"
-							type="radio"
-							name="radio"
-							value="From Home"
-							onChange={(e) => setRadio(e.target.value)}
-						/>
-						<div className="change">From Home </div>
-						<input className="checkbox" type="radio" name="radio" value="Hybrid" />
-						<div className="change">Hybrid</div>
-					</div>
-					<div className="work_2">Did you contact covid 19? :(</div>
-					<div className="topping">
-						<button className="isTogled" onClick={() => changeToggle(true)}>
+					<form onSubmit={handleSubmit(onFormSubmit)} ref={formRef} id="3">
+						<div className="topping">
 							<input
 								className="checkbox"
 								type="radio"
-								name="covid"
-								value="Yes"
-								onChange={(e) => setCovid(e.target.value)}
+								value="From Sairme Office"
+								onChange={(e) => setRadio(e.target.value)}
+								{...register('work', { required: true })}
 							/>
-						</button>
-						<div>
-							<button className="isTogled" onClick={() => changeToggle(false)}>
-								<div className="change">Yes</div>
+							<div className="change">From Sairme Office</div>
+							<input
+								className="checkbox"
+								type="radio"
+								value="From Home"
+								onChange={(e) => setRadio(e.target.value)}
+								{...register('work', { required: true })}
+							/>
+							<div className="change">From Home </div>
+							<input
+								className="checkbox"
+								type="radio"
+								name="radio"
+								value="Hybrid"
+								{...register('work', { required: true })}
+							/>
+							<div className="change">Hybrid</div>
+							<div className="errors_2">{errors.work?.type === 'required' && '* please select '}</div>
+						</div>
+						<div className="work_2">Did you contact covid 19? :(</div>
+						<div className="topping">
+							<button className="isTogled" onClick={() => changeToggle(true)}>
 								<input
-									className="checkbox"
+									className="checkbox_2"
 									type="radio"
-									name="covid"
-									value="No"
+									value="Yes"
 									onChange={(e) => setCovid(e.target.value)}
+									{...register('covid', { required: true })}
 								/>
 							</button>
-							<div className="change">No</div>
+							<div>
+								<button className="isTogled" onClick={() => changeToggle(false)}>
+									<div className="change_2">Yes</div>
+									<input
+										className="checkbox_3"
+										type="radio"
+										value="No"
+										onChange={(e) => setCovid(e.target.value)}
+										{...register('covid', { required: true })}
+									/>
+								</button>
+								<div className="change_2">No</div>
+							</div>
+							{isToggled && <Date />}
+							{isToggled}
+							<div className="errors_2">{errors.covid?.type === 'required' && '* please select '}</div>
 						</div>
-						{isToggled && <Date />}
-						{isToggled}
-					</div>
-					<div className="text">Have you been vaccinated?</div>
-					<input
-						className="checkbox"
-						type="radio"
-						name="done"
-						value="Yes"
-						onChange={(e) => setDone(e.target.value)}
-					/>
-					<div className="change">Yes</div>
-					<input
-						className="checkbox"
-						type="radio"
-						name="done"
-						value="No"
-						onChange={(e) => setDone(e.target.value)}
-					/>
-					<div className="change">No</div>
-					<div className="last">When did you get your last covid vaccine?</div>
-					<form>
-						<input type="date" id="form-input_3" name="form-input_3" />
+						<div className="text">Have you been vaccinated?</div>
+						<input
+							className="checkbox"
+							type="radio"
+							value="Yes"
+							onChange={(e) => setDone(e.target.value)}
+							{...register('vaqcine', { required: true })}
+						/>
+						<div className="change">Yes</div>
+						<input
+							className="checkbox"
+							type="radio"
+							value="No"
+							onChange={(e) => setDone(e.target.value)}
+							{...register('vaqcine', { required: true })}
+						/>
+						<div className="change">No</div>
+						<div className="errors_2">{errors.vaqcine?.type === 'required' && '* please select '}</div>
+						<div className="last">When did you get your last covid vaccine?</div>
+						<input type="date" id="form-input_3" {...register('date', { required: true })} />
+						<div className="errors_2">{errors.date?.type === 'required' && '* please select '}</div>
 					</form>
 				</div>
-				<Pagination />
+				<Pagination formRef={formRef} />
 			</div>
 			<div className="split right">
 				<div className="centered">

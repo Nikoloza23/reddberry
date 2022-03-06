@@ -1,18 +1,19 @@
 .all {
 	position: relative;
-	margin-top: -50px;
+	margin-top: -60px;
 	top: 30px;
 }
 
 .rocketer_3 {
-	position: relative;
-	margin-top: -380px;
+	position: absolute;
+	margin-top: -330px;
 	width: 788px;
 	font-family: Rowdies;
 	color: #fe3b1f;
 	line-height: 100px;
 	font-size: 54px;
 	top: 10px;
+	margin-left: -400px;
 }
 
 .topping {
@@ -39,6 +40,28 @@
 	height: 12px;
 }
 
+.checkbox_2 {
+	position: relative;
+	margin-left: 100px;
+	width: 12px;
+	height: 12px;
+	top: 3px;
+}
+
+.checkbox_3 {
+	position: relative;
+	margin-left: 60px;
+}
+
+.errors_2 {
+	position: relative;
+	left: 100px;
+	font-style: italic;
+	font-size: 11px;
+	color: #fe3b1f;
+	line-height: 13px;
+}
+
 .change {
 	position: relative;
 	font-size: 14px;
@@ -46,6 +69,16 @@
 	line-height: 17.5px;
 	margin-left: 130px;
 	top: -20px;
+	margin-bottom: -13px;
+}
+
+.change_2 {
+	position: relative;
+	font-size: 14px;
+	font-family: Monsterrant;
+	line-height: 17.5px;
+	margin-left: 130px;
+	top: -22px;
 	margin-bottom: -13px;
 }
 
@@ -81,9 +114,9 @@ input.form-input_3 {
 }
 
 button.isTogled {
-    background: white;
-    border: 1px;
-    padding: 0;
+	background: white;
+	border: 1px;
+	padding: 0;
 }
 
 .text {

@@ -8,6 +8,15 @@
 	padding-top: 20px;
 }
 
+.errors {
+	position: relative;
+	left: 40px;
+	font-style: italic;
+	font-size: 11px;
+	color: #fe3b1f;
+	line-height: 13px;
+}
+
 .left {
 	left: 0;
 	background-color: #fff;
@@ -64,7 +73,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 220px;
+	margin-top: 180px;
 	flex-direction: column;
 }
 
@@ -79,4 +88,3 @@ input.form-input {
 	font-style: italic;
 	font-size: 20px;
 }
-

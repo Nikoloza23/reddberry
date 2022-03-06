@@ -1,1 +1,1 @@
-export const reduxSkills = store => store.skills
+export const reduxSkills = (store) => store.skills;

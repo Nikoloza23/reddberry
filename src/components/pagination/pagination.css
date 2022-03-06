@@ -8,7 +8,7 @@
 	cursor: pointer;
 }
 
-span.dot {
+.dot {
 	position: relative;
 	height: 19px;
 	width: 19px;
@@ -16,13 +16,19 @@ span.dot {
 	border-radius: 50%;
 	display: inline-block;
 	transition: transform 0.2s;
-   left: 250px;
+	left: 250px;
+	cursor: none;
+	top: 5px;
 }
 
-span.dot:hover {
-	cursor: pointer;
+.Active span {
 	background: #fe3b1f;
 	transform: scale(1.5);
+}
+
+button.button-right {
+	background: none;
+	border: 1px;
 }
 
 .previouses {
@@ -31,26 +37,27 @@ span.dot:hover {
 	justify-content: center;
 }
 
-
 img.left {
-    position: relative;
-    margin-right: 50px;
-    background: none;
-    height: 19px;
-    width: 19px;
-    border-radius: 50%;
+	position: relative;
+	margin-right: 50px;
+	background: none;
+	height: 19px;
+	width: 19px;
+	border-radius: 50%;
 	cursor: pointer;
 }
 
-
-
 img.right {
-    position: relative;
-    margin-left: 260px;
-    background: none;
-    height: 19px;
-    width: 19px;
-    border-radius: 50%;
-    left: -90px;
+	position: relative;
+	margin-left: 260px;
+	background: none;
+	height: 19px;
+	width: 19px;
+	border-radius: 50%;
+	left: -90px;
 	cursor: pointer;
+}
+
+.Eventnone {
+	visibility: initial;
 }

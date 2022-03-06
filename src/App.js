@@ -17,7 +17,7 @@ function App() {
 				<Route path="/secondPage" element={<Page2 />} />
 				<Route path="/thirdPage" element={<Page3 />} />
 				<Route path="/fourthPage" element={<Page4 />} />
-				<Route path="/submitPage" element={<SubmitPage/>} />
+				<Route path="/submitPage" element={<SubmitPage />} />
 			</Routes>
 		</div>
 	);

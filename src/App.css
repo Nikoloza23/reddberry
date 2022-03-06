@@ -2,8 +2,6 @@ input[type='radio'] {
 	accent-color: #000000;
 }
 
-
-
 @media (min-width: 1920px) {
 	.form_container {
 		gap: 5px;

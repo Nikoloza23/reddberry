@@ -5,6 +5,7 @@ const initialState = {
 	skills: [],
 	covid: {},
 	event: {},
+	IndexSave: [],
 };
 
 const handleCart = (state = initialState, action) => {
@@ -21,6 +22,12 @@ const handleCart = (state = initialState, action) => {
 			return {
 				...state,
 				skills: [...state.skills.slice(0, skillIndex), ...state.skills.slice(skillIndex + 1)],
+			};
+		}
+		case types.SAVE__INDEX: {
+			return {
+				...state,
+				IndexSave: [...state.IndexSave, action.payload],
 			};
 		}
 
