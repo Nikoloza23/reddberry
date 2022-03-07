@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import { addSkill, deleteSkill } from '../../redux/action';
 import { reduxSkills } from '../../redux/selectors';
 
@@ -11,7 +10,6 @@ import Pagination from '../../components/pagination/Pagination';
 
 function Page2() {
 	const formRef = useRef();
-	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const choosenSkills = useSelector(reduxSkills);
 	const [skills, setSkills] = useState(null);
@@ -69,7 +67,7 @@ function Page2() {
 									{...register('experience', { required: true })}
 								/>
 								<div className="errors_3">
-									{errors.experience?.type === 'required' && '* please select '}
+									{errors.experience?.type === 'required' && '* experience is required '}
 								</div>
 							</div>
 						</form>

@@ -69,7 +69,9 @@ function Page3() {
 								{...register('work', { required: true })}
 							/>
 							<div className="change">Hybrid</div>
-							<div className="errors_2">{errors.work?.type === 'required' && '* please select '}</div>
+							<div className="errors_2">
+								{errors.work?.type === 'required' && '* work type is required '}
+							</div>
 						</div>
 						<div className="work_2">Did you contact covid 19? :(</div>
 						<div className="topping">
@@ -97,7 +99,9 @@ function Page3() {
 							</div>
 							{isToggled && <Date />}
 							{isToggled}
-							<div className="errors_2">{errors.covid?.type === 'required' && '* please select '}</div>
+							<div className="errors_2">
+								{errors.covid?.type === 'required' && '* covid form is required '}
+							</div>
 						</div>
 						<div className="text">Have you been vaccinated?</div>
 						<div className="topping">
@@ -123,7 +127,7 @@ function Page3() {
 								</button>
 								<div className="change_2">No</div>
 								<div className="errors_2">
-									{errors.vaqcine?.type === 'required' && '* please select '}
+									{errors.vaqcine?.type === 'required' && '* vacinated form is required '}
 								</div>
 							</div>
 						</div>
