@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-
+import { useNavigate } from 'react-router-dom';
 import { addSkill, deleteSkill } from '../../redux/action';
 import { reduxSkills } from '../../redux/selectors';
 
@@ -11,6 +11,7 @@ import Pagination from '../../components/pagination/Pagination';
 
 function Page2() {
 	const formRef = useRef();
+	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const choosenSkills = useSelector(reduxSkills);
 	const [skills, setSkills] = useState(null);
@@ -67,9 +68,9 @@ function Page2() {
 									placeholder="Experience Duration in Years"
 									{...register('experience', { required: true })}
 								/>
-							</div>
-							<div className="errors_3">
-								{errors.experience?.type === 'required' && '* experience required '}
+								<div className="errors_3">
+									{errors.experience?.type === 'required' && '* please select '}
+								</div>
 							</div>
 						</form>
 						<button className="add_duration" form={formRef?.current?.id}>
@@ -86,7 +87,7 @@ function Page2() {
 							</div>
 						</div>
 					))}
-					<Pagination formRef={formRef} />
+					<Pagination />
 				</div>
 				<div className="split right">
 					<div className="centered">
