@@ -1,0 +1,13 @@
+.back {
+	height: 100vh;
+	background: #0c0d0e;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.thank_redberry {
+	color: #fe3b1f;
+	font-family: mixed;
+	font-size: 80px;
+}

@@ -13,13 +13,13 @@ function Page2() {
 	const formRef = useRef();
 	const dispatch = useDispatch();
 	const choosenSkills = useSelector(reduxSkills);
+	const [skills, setSkills] = useState([]);
+
 	const {
 		handleSubmit,
 		register,
 		// formState: { errors },
 	} = useForm();
-
-	const [skills, setSkills] = useState([]);
 
 	useEffect(() => {
 		axios
@@ -47,7 +47,9 @@ function Page2() {
 						<form id="technologyForm" onSubmit={handleSubmit(onFormSubmit)} ref={formRef}>
 							<div className="form_input_2">
 								<select className="form-input_4" {...register('skill', { required: true })}>
-									<option defaultValue>Skills</option>
+									<option defaultValue disabled>
+										Skills
+									</option>
 									{skills &&
 										skills.map((skill) => (
 											<option className="skills" key={skill.id} value={skill.title}>

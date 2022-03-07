@@ -7,6 +7,7 @@ import Page2 from './pages/page2/Page2';
 import Page3 from './pages/page3/Page3';
 import Page4 from './pages/page4/Page4';
 import SubmitPage from './pages/submitpage/SubmitPage';
+import Thank from './pages/submitpage/thanks/Thank';
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/thirdPage" element={<Page3 />} />
 				<Route path="/fourthPage" element={<Page4 />} />
 				<Route path="/submitPage" element={<SubmitPage />} />
+				<Route path="/thanksPage" element={<Thank />} />
 			</Routes>
 		</div>
 	);
