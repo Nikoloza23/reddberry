@@ -10,8 +10,8 @@ function Covid() {
 
 	const {
 		register,
-		/* 		formState: { errors },
-		 */ handleSubmit,
+		formState: { errors },
+		handleSubmit,
 	} = useForm();
 
 	const onFormSubmit = (data) => {
@@ -19,11 +19,13 @@ function Covid() {
 
 		navigate('/fourthPage');
 	};
+
 	return (
 		<div>
 			<form className="covid_3" onSubmit={handleSubmit(onFormSubmit)} ref={formRef} id="3">
 				<div className="last">When did you get your last covid vaccine?</div>
-				<input type="date" id="form-input_3" {...register('date', { required: true })} />
+				<input type="date" id="form-input_3" {...register('had_covid_at', { required: true })} />
+				{errors.had_covid_at?.type === 'required' && '* when is required '}
 			</form>
 		</div>
 	);

@@ -32,7 +32,7 @@ function Page2() {
 	}, []);
 
 	const onFormSubmit = (data) => {
-		console.log('technology data', data);
+		console.log('skills', data);
 
 		dispatch(addSkill({ id: Math.random(), ...data }));
 	};
@@ -45,14 +45,14 @@ function Page2() {
 					<div className="form_container_2">
 						<form id="technologyForm" onSubmit={handleSubmit(onFormSubmit)} ref={formRef}>
 							<div className="form_input_2">
-								<select className="form-input_4" {...register('skill', { required: true })}>
+								<select className="form-input_4" {...register('skills', { required: true })}>
 									<option defaultValue disabled>
 										Skills
 									</option>
 									{skills &&
 										skills.map((skill) => (
-											<option className="skills" key={skill.id} value={skill.title}>
-												{skill.title}
+											<option className="skills" key={skill.id} value={skill.id}>
+												{skill.title.id}
 											</option>
 										))}
 								</select>

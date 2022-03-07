@@ -50,7 +50,7 @@ function Page3() {
 								type="radio"
 								value="From Sairme Office"
 								onChange={(e) => setRadio(e.target.value)}
-								{...register('work', { required: true })}
+								{...register('work_preference', { required: true })}
 							/>
 							<div className="change">From Sairme Office</div>
 							<input
@@ -58,7 +58,7 @@ function Page3() {
 								type="radio"
 								value="From Home"
 								onChange={(e) => setRadio(e.target.value)}
-								{...register('work', { required: true })}
+								{...register('work_preference', { required: true })}
 							/>
 							<div className="change">From Home </div>
 							<input
@@ -66,11 +66,11 @@ function Page3() {
 								type="radio"
 								name="radio"
 								value="Hybrid"
-								{...register('work', { required: true })}
+								{...register('work_preference', { required: true })}
 							/>
 							<div className="change">Hybrid</div>
 							<div className="errors_2">
-								{errors.work?.type === 'required' && '* work type is required '}
+								{errors.work_preference?.type === 'required' && '* work type is required '}
 							</div>
 						</div>
 						<div className="work_2">Did you contact covid 19? :(</div>
@@ -79,9 +79,9 @@ function Page3() {
 								<input
 									className="checkbox_2"
 									type="radio"
-									value="Yes"
+									value="true"
 									onChange={(e) => setCovid(e.target.value)}
-									{...register('covid', { required: true })}
+									{...register('had_covid', { required: true })}
 								/>
 							</button>
 							<div>
@@ -90,9 +90,9 @@ function Page3() {
 									<input
 										className="checkbox_3"
 										type="radio"
-										value="No"
+										value="false"
 										onChange={(e) => setCovid(e.target.value)}
-										{...register('covid', { required: true })}
+										{...register('had_covid', { required: true })}
 									/>
 								</button>
 								<div className="change_2">No</div>
@@ -100,7 +100,7 @@ function Page3() {
 							{isToggled && <Date />}
 							{isToggled}
 							<div className="errors_2">
-								{errors.covid?.type === 'required' && '* covid form is required '}
+								{errors.had_covid?.type === 'required' && '* covid form is required '}
 							</div>
 						</div>
 						<div className="text">Have you been vaccinated?</div>
@@ -109,7 +109,7 @@ function Page3() {
 								<input
 									className="checkbox_2"
 									type="radio"
-									value="Yes"
+									value="true"
 									onChange={(e) => setDone(e.target.value)}
 									{...register('vaqcine', { required: true })}
 								/>
@@ -120,7 +120,7 @@ function Page3() {
 									<input
 										className="checkbox_4"
 										type="radio"
-										value="No"
+										value="false"
 										onChange={(e) => setDone(e.target.value)}
 										{...register('vaqcine', { required: true })}
 									/>
@@ -129,10 +129,10 @@ function Page3() {
 								<div className="errors_2">
 									{errors.vaqcine?.type === 'required' && '* vacinated form is required '}
 								</div>
+								<div className="lastToggled">{lastToggled && <Covid />}</div>
+								{lastToggled}
 							</div>
 						</div>
-						<div className="lastToggled">{lastToggled && <Covid />}</div>
-						{lastToggled}
 					</form>
 				</div>
 				<Pagination formRef={formRef} />

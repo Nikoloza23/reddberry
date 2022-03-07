@@ -35,11 +35,11 @@ function Page1() {
 								id="fname"
 								name="fname"
 								placeholder="First Name"
-								{...register('firstName', { required: true, minLength: 2 })}
+								{...register('first_name', { required: true, minLength: 2 })}
 							/>
 							<div className="errors">
-								{errors.firstName?.type === 'required' && '* first name is required'}
-								{errors.firstName?.type === 'minLength' && '*min 2 symbol'}
+								{errors.first_name?.type === 'required' && '* first name is required'}
+								{errors.first_name?.type === 'minLength' && '*min 2 symbol'}
 							</div>
 						</div>
 						<div className="form_input">
@@ -49,11 +49,11 @@ function Page1() {
 								id="lname"
 								name="lname"
 								placeholder="Last Name"
-								{...register('lastName', { required: true })}
+								{...register('last_name', { required: true })}
 							/>
 							<div className="errors">
-								{errors.lastName?.type === 'required' && '* last name is required'}
-								{errors.lastName?.type === 'minLength' &&
+								{errors.last_name?.type === 'required' && '* last name is required'}
+								{errors.last_name?.type === 'minLength' &&
 									'* last name should include 3 or more characters'}
 							</div>
 						</div>
@@ -78,11 +78,11 @@ function Page1() {
 								id="phone"
 								name="phone"
 								placeholder="+995 5__ __ __ __"
-								{...register('mobileNumber', { required: true, pattern: /^\+[0-9]{3}[0-9]{9}/g })}
+								{...register('phone', { required: true, pattern: /^\+[0-9]{3}[0-9]{9}/g })}
 							/>
 							<div className="errors">
-								{errors.mobileNumber?.type === 'required' && '* mobileNumber is required'}
-								{errors.mobileNumber?.type === 'pattern' && '* mobileNumber is include Geo format'}
+								{errors.phone?.type === 'required' && '* mobileNumber is required'}
+								{errors.phone?.type === 'pattern' && '* mobileNumber is include Geo format'}
 							</div>
 						</div>
 					</div>

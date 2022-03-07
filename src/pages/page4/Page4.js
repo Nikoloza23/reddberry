@@ -38,7 +38,7 @@ function Page4() {
 								type="radio"
 								value="Yes"
 								onChange={(e) => setTalk(e.target.value)}
-								{...register('talk', { required: true })}
+								{...register('will_organize_devtalk', { required: true })}
 							/>
 							<div className="devtalks_answer">Yes</div>
 							<input
@@ -46,24 +46,30 @@ function Page4() {
 								type="radio"
 								value="Yes"
 								onChange={(e) => setTalk(e.target.value)}
-								{...register('talk', { required: true })}
+								{...register('will_organize_devtalk', { required: true })}
 							/>
 							<div className="devtalks_answer">No</div>
-							<div className="errors_2">{errors.talk?.type === 'required' && '* please select '}</div>
+							<div className="errors_2">
+								{errors.will_organize_devtalk?.type === 'required' && '* please select '}
+							</div>
 							<div className="about">What would you speak about at Devtalk?</div>
 							<textarea
 								className="txt"
 								placeholder="I would..."
-								{...register('devtalk', { required: true })}
+								{...register('devtalk_topic', { required: true })}
 							></textarea>
-							<div className="errors_2">{errors.devtalk?.type === 'required' && '* please select '}</div>
+							<div className="errors_2">
+								{errors.devtalk_topic?.type === 'required' && '* please select '}
+							</div>
 							<div className="txt_2">Tell us something special</div>
 							<textarea
 								className="txt_3"
 								placeholder="I..."
-								{...register('about', { required: true })}
+								{...register('something_special', { required: true })}
 							></textarea>
-							<div className="errors_2">{errors.about?.type === 'required' && '* please select '}</div>
+							<div className="errors_2">
+								{errors.something_special?.type === 'required' && '* please select '}
+							</div>
 						</div>
 					</form>
 				</div>
