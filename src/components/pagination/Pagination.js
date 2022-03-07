@@ -45,10 +45,11 @@ const Pagination = ({ formRef }) => {
 		},
 	];
 
+	const Active = Pages.findIndex((el) => el.path === pathname);
+
 	useEffect(() => {
-		const Active = Pages.findIndex((el) => el.path === pathname);
 		dispatch(SaveIndex(Active));
-	}, [dispatch]);
+	}, [dispatch, Active]);
 
 	return (
 		<div className="circle_container">

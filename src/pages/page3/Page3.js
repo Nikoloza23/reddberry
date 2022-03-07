@@ -122,9 +122,12 @@ function Page3() {
 									/>
 								</button>
 								<div className="change_2">No</div>
+								<div className="errors_2">
+									{errors.vaqcine?.type === 'required' && '* please select '}
+								</div>
 							</div>
 						</div>
-						{lastToggled && <Covid />}
+						<div className="lastToggled">{lastToggled && <Covid />}</div>
 						{lastToggled}
 					</form>
 				</div>

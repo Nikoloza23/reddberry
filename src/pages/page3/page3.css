@@ -1,12 +1,12 @@
 .all {
 	position: relative;
-	margin-top: -60px;
-	top: 30px;
+	margin-top: 0px;
+	top: -70px;
 }
 
 .rocketer_3 {
 	position: absolute;
-	margin-top: -330px;
+	margin-top: -230px;
 	width: 788px;
 	font-family: Rowdies;
 	color: #fe3b1f;
@@ -18,6 +18,15 @@
 
 .topping {
 	margin-top: 0.5rem;
+}
+
+.lastToggled {
+	margin-bottom: 0px;
+}
+
+form#\33 {
+	position: relative;
+	top: 30px;
 }
 
 .work {
