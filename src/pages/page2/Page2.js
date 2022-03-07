@@ -13,12 +13,12 @@ function Page2() {
 	const formRef = useRef();
 	const dispatch = useDispatch();
 	const choosenSkills = useSelector(reduxSkills);
-	const [skills, setSkills] = useState([]);
+	const [skills, setSkills] = useState(null);
 
 	const {
 		handleSubmit,
 		register,
-		// formState: { errors },
+		formState: { errors },
 	} = useForm();
 
 	useEffect(() => {
@@ -68,6 +68,9 @@ function Page2() {
 									{...register('experience', { required: true })}
 								/>
 							</div>
+							<div className="errors_3">
+								{errors.experience?.type === 'required' && '* experience required '}
+							</div>
 						</form>
 						<button className="add_duration" form={formRef?.current?.id}>
 							Add Programming Language
@@ -83,7 +86,7 @@ function Page2() {
 							</div>
 						</div>
 					))}
-					<Pagination />
+					<Pagination formRef={formRef} />
 				</div>
 				<div className="split right">
 					<div className="centered">

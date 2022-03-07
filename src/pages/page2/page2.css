@@ -24,6 +24,14 @@
 	font-size: 50px;
 }
 
+.errors_3 {
+	position: relative;
+	left: -70px;
+	font-size: 14px;
+	font-style: Montserrat;
+	color: #fe3b1f;
+}
+
 .duration {
 	padding-left: 35px;
 	font-family: Montserrat;
