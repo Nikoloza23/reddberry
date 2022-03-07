@@ -47,9 +47,7 @@ function Page2() {
 						<form id="technologyForm" onSubmit={handleSubmit(onFormSubmit)} ref={formRef}>
 							<div className="form_input_2">
 								<select className="form-input_4" {...register('skill', { required: true })}>
-									<option selected disabled hidden>
-										Skills
-									</option>
+									<option defaultValue>Skills</option>
 									{skills &&
 										skills.map((skill) => (
 											<option className="skills" key={skill.id} value={skill.title}>

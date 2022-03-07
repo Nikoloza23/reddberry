@@ -62,6 +62,15 @@
 	line-height: 13px;
 }
 
+button.lastTogled_2 {
+	background: none;
+	border: 1px;
+}
+
+input.checkbox_4 {
+	margin-left: 50px;
+}
+
 .change {
 	position: relative;
 	font-size: 14px;
@@ -80,6 +89,17 @@
 	margin-left: 130px;
 	top: -22px;
 	margin-bottom: -13px;
+}
+
+.change_4 {
+	position: relative;
+	font-size: 14px;
+	font-family: Monsterrant;
+	line-height: 17.5px;
+	margin-left: 130px;
+	top: -22px;
+	margin-bottom: -13px;
+	left: -10px;
 }
 
 .work_2 {

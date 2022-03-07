@@ -28,6 +28,7 @@ function Page4() {
 				<div className="fourth">
 					<div className="centered">
 						<h1 className="rocketer_4">What about you?</h1>
+						<div>{talk}</div>
 					</div>
 					<form onSubmit={handleSubmit(onFormSubmit)} ref={formRef} id="4">
 						<div className="devtalks">
