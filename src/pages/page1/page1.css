@@ -8,6 +8,11 @@
 	padding-top: 20px;
 }
 
+form#\31 {
+	position: relative;
+	top: 30px;
+}
+
 .errors {
 	position: relative;
 	left: 40px;

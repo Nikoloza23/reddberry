@@ -26,7 +26,7 @@ function Page1() {
 				<div className="centered">
 					<h1 className="rocketer">Hey, Rocketeer, what are you coordinates?</h1>
 				</div>
-				<form onSubmit={handleSubmit(onFormSubmit)} ref={formRef} id="1">
+				<form className="form" onSubmit={handleSubmit(onFormSubmit)} ref={formRef} id="1">
 					<div className="form_container">
 						<div className="form_input">
 							<input
