@@ -78,7 +78,7 @@ function Page2() {
 
 					{choosenSkills.map((skill) => (
 						<div className="form_inputs" key={skill.id}>
-							<div className="form-input_2">{skill.skill}</div>
+							<div className="form-input_2">{skill.skills}</div>
 							<div className="experience">Years of Experience {skill.experience}</div>
 							<div className="remove" onClick={() => dispatch(deleteSkill(skill.id))}>
 								-
