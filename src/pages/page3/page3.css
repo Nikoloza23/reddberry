@@ -124,6 +124,11 @@ input.checkbox_4 {
 	margin-bottom: 15px;
 }
 
+.covid_3 {
+	position: relative;
+	top: 0px;
+}
+
 input#form-input_3 {
 	margin-left: 100px;
 	border: 1px solid black;
@@ -131,6 +136,23 @@ input#form-input_3 {
 	margin-bottom: 25px;
 	font-size: 18px;
 	font-family: Monsterrant;
+}
+
+input#form-input_7 {
+	border: 1px solid black;
+	width: 230px;
+	margin-bottom: 25px;
+	font-size: 18px;
+	font-family: Monsterrant;
+	margin-top: 10px;
+}
+
+.form-input_5 {
+	border: 1px solid black;
+	width: 230px;
+	font-size: 18px;
+	font-family: Monsterrant;
+	margin-top: 10px;
 }
 
 input.form-input_3 {
@@ -167,7 +189,7 @@ button.isTogled {
 .reddbery_origin_3 {
 	display: flex;
 	justify-content: center;
-	margin-top: -320px;
+	margin-top: -300px;
 	width: 788px;
 	height: 175px;
 	font-family: Rowdies;

@@ -36,4 +36,19 @@ input[type='radio'] {
 		height: 80vh;
 		margin-bottom: -150px;
 	}
+	.errors {
+		top: 200px;
+	}
+	div.devtalks {
+		margin-left: 200px;
+		margin-top: 200px;
+	}
+	form#\33 {
+		position: relative;
+		margin-left: 200px;
+		margin-top: 300px;
+	}
+	h1.rocketer_3 {
+		margin-top: -120px;
+	}
 }

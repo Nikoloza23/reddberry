@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import Pagination from '../../components/pagination/Pagination';
-import Date from './helpers/Date';
 import './page3.css';
 import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import Covid from './helpers/Covid';
 
 function Page3() {
 	const [radio, setRadio] = useState();
@@ -97,10 +95,24 @@ function Page3() {
 								</button>
 								<div className="change_2">No</div>
 							</div>
-							{isToggled && <Date />}
-							{isToggled}
+							{isToggled ? (
+								<div className="when">
+									When?
+									<div className="form_input">
+										<input
+											className="form-input_5"
+											type="date"
+											{...register('had_covid_at', { required: true })}
+										/>
+									</div>
+								</div>
+							) : (
+								isToggled
+							)}
+
 							<div className="errors_2">
 								{errors.had_covid?.type === 'required' && '* covid form is required '}
+								{errors.had_covid_at?.type === 'required' && '* when form is required '}
 							</div>
 						</div>
 						<div className="text">Have you been vaccinated?</div>
@@ -111,7 +123,7 @@ function Page3() {
 									type="radio"
 									value="true"
 									onChange={(e) => setDone(e.target.value)}
-									{...register('vaqcine', { required: true })}
+									{...register('vaccinated', { required: true })}
 								/>
 							</button>
 							<div>
@@ -122,15 +134,30 @@ function Page3() {
 										type="radio"
 										value="false"
 										onChange={(e) => setDone(e.target.value)}
-										{...register('vaqcine', { required: true })}
+										{...register('vaccinated', { required: true })}
 									/>
 								</button>
 								<div className="change_2">No</div>
 								<div className="errors_2">
-									{errors.vaqcine?.type === 'required' && '* vacinated form is required '}
+									{errors.vaccinated?.type === 'required' && '* vacinated form is required '}
 								</div>
-								<div className="lastToggled">{lastToggled && <Covid />}</div>
-								{lastToggled}
+								<div className="lastToggled">
+									{lastToggled ? (
+										<div className="last">
+											When did you get your last covid vaccine?
+											<input
+												type="date"
+												id="form-input_7"
+												{...register('vaccinated_at', { required: true })}
+											/>
+										</div>
+									) : (
+										lastToggled
+									)}
+								</div>
+								<div className="errors_2">
+									{errors.vaccinated_at?.type === 'required' && '* vacinated form is required '}
+								</div>
 							</div>
 						</div>
 					</form>

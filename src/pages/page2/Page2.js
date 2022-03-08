@@ -52,7 +52,7 @@ function Page2() {
 									{skills &&
 										skills.map((skill) => (
 											<option className="skills" key={skill.id} value={skill.id}>
-												{skill.title.id}
+												{skill.title}
 											</option>
 										))}
 								</select>
