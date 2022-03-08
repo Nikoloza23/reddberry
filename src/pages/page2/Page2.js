@@ -57,6 +57,7 @@ function Page2() {
 										))}
 								</select>
 							</div>
+
 							<div>
 								<input
 									className="duration"

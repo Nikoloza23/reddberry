@@ -1,0 +1,30 @@
+.submited_list {
+	background: black;
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+.applications {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-family: Rowdies;
+	font-style: bold;
+	font-size: 56px;
+	letter-spacing: 5px;
+}
+
+.selected {
+	margin-left: 280px;
+	color: white;
+	background-color: #fe3b1f;
+	width: 880px;
+	height: 35px;
+	cursor: pointer;
+}
+
+.choosen_data {
+	background-color: white;
+	color: black;
+}
