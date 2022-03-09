@@ -16,7 +16,7 @@
 }
 
 .selected {
-	margin-left: 620px;
+	margin-left: 420px;
 	color: white;
 	background-color: #fe3b1f;
 	width: 1000px;
@@ -59,7 +59,7 @@
 	width: 1000px;
 	position: relative;
 	left: 270px;
-	margin-left: 350px;
+	margin-left: 150px;
 	height: 100vh;
 }
 
