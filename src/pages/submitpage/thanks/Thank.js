@@ -9,7 +9,7 @@ function Thank() {
 		setTimeout(() => {
 			navigate('/');
 		}, 3000);
-	}, []);
+	}, [navigate]);
 
 	return (
 		<div className="back">
