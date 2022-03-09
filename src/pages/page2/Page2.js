@@ -38,6 +38,7 @@ function Page2() {
 
 	// console.log('api skills', skills);
 	console.log('choosenSkills', choosenSkills);
+	console.log(skills);
 
 	return (
 		<div className="split_2">
