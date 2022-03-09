@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
@@ -9,7 +9,6 @@ import './page2.css';
 import Pagination from '../../components/pagination/Pagination';
 
 function Page2() {
-	const formRef = useRef();
 	const dispatch = useDispatch();
 	const choosenSkills = useSelector(reduxSkills);
 	const [skills, setSkills] = useState(null);
@@ -34,8 +33,11 @@ function Page2() {
 	const onFormSubmit = (data) => {
 		console.log('skills', data);
 
-		dispatch(addSkill({ id: Math.random(), ...data }));
+		dispatch(addSkill({ ...data }));
 	};
+
+	// console.log('api skills', skills);
+	console.log('choosenSkills', choosenSkills);
 
 	return (
 		<div className="split_2">
@@ -43,9 +45,9 @@ function Page2() {
 				<div className="centered">
 					<h1 className="rocketer_2">Tell us about your skills</h1>
 					<div className="form_container_2">
-						<form id="technologyForm" onSubmit={handleSubmit(onFormSubmit)} ref={formRef}>
+						<form id="technologyForm" onSubmit={handleSubmit(onFormSubmit)}>
 							<div className="form_input_2">
-								<select className="form-input_4" {...register('skills', { required: true })}>
+								<select className="form-input_4" {...register('id', { required: true })}>
 									<option defaultValue disabled>
 										Skills
 									</option>
@@ -71,22 +73,20 @@ function Page2() {
 									{errors.experience?.type === 'required' && '* experience is required '}
 								</div>
 							</div>
+							<button className="add_duration">Add Programming Language</button>
 						</form>
-						<button className="add_duration" form={formRef?.current?.id}>
-							Add Programming Language
-						</button>
 					</div>
 
 					{choosenSkills.map((skill) => (
 						<div className="form_inputs" key={skill.id}>
-							<div className="form-input_2">{skill.skill}</div>
+							<div className="form-input_2">{skills && skills[skill.id - 1]?.title}</div>
 							<div className="experience">Years of Experience {skill.experience}</div>
 							<div className="remove" onClick={() => dispatch(deleteSkill(skill.id))}>
 								-
 							</div>
 						</div>
 					))}
-					<Pagination />
+					<Pagination choosenSkills={choosenSkills} />
 				</div>
 				<div className="split right">
 					<div className="centered">

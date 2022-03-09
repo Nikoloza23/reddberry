@@ -16,15 +16,173 @@
 }
 
 .selected {
-	margin-left: 280px;
+	margin-left: 620px;
 	color: white;
 	background-color: #fe3b1f;
-	width: 880px;
+	width: 1000px;
 	height: 35px;
 	cursor: pointer;
+	padding-top: 2px;
+	padding-right: 980px;
+	font-size: 20px;
 }
 
-.choosen_data {
+.choosen_info {
+	position: relative;
+	margin-left: 300px;
+	font-style: italic;
+	color: #fe3b1f;
+	font-family: Montserrat;
+	font-size: 18px;
+}
+
+.firs_page {
+	position: relative;
+	margin-top: 10px;
+	top: 10px;
+	color: #000000;
+}
+
+.name_1 {
+	position: relative;
+	margin-left: 450px;
+	margin-top: 10px;
+	top: -140px;
+	font-style: italic;
+	color: #000000;
+	font-family: Montserrat;
+	font-size: 18px;
+}
+
+.all_list {
 	background-color: white;
-	color: black;
+	width: 1000px;
+	position: relative;
+	left: 270px;
+	margin-left: 350px;
+	height: 100vh;
+}
+
+.chooosen_data {
+	position: relative;
+	left: -270px;
+}
+
+.choosen_info_2 {
+	margin-left: 800px;
+	position: relative;
+	top: -320px;
+	font-style: italic;
+	color: #fe3b1f;
+	font-family: Montserrat;
+	font-size: 18px;
+}
+
+.second_page_2 {
+	margin-top: 10px;
+	font-size: 20px;
+	color: #000000;
+}
+
+.choosen_info_3 {
+	position: relative;
+	margin-left: 300px;
+	top: -200px;
+	font-style: italic;
+	color: #fe3b1f;
+	font-family: Montserrat;
+	font-size: 18px;
+}
+
+.third_page_3 {
+	font-style: italic;
+	color: #000000;
+	font-family: Montserrat;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.third_page_4 {
+	font-style: italic;
+	color: #000000;
+	font-family: Montserrat;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.third_page_10 {
+	font-style: italic;
+	color: #000000;
+	font-family: Montserrat;
+	font-size: 18px;
+	margin-top: 20px;
+	margin-left: 500px;
+	position: relative;
+	top: -650px;
+}
+
+.radios_4 {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.third_page_5 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family: Montserrat;
+	font-size: 18px;
+}
+
+.third_page_6 {
+	margin-top: 20px;
+	color: #000000;
+	margin-bottom: 20px;
+}
+
+.choosen_info_5 {
+	margin-left: 500px;
+	position: relative;
+	top: -650px;
+}
+
+.txt_7 {
+	position: relative;
+	top: -560px;
+	padding-left: 20px;
+	padding-top: 10px;
+	border: 1px solid #525557;
+	height: 89px;
+	margin-left: 500px;
+	width: 335px;
+	resize: none;
+	font-size: 13px;
+	font-family: Monsterrant;
+}
+
+.txt_8 {
+	margin-left: 500px;
+	position: relative;
+	top: -550px;
+	color: #000000;
+}
+
+.txt_4 {
+	margin-left: 500px;
+	position: relative;
+	top: -600px;
+	color: #000000;
+}
+
+.txt_10 {
+	position: relative;
+	top: -530px;
+	padding-left: 20px;
+	padding-top: 10px;
+	border: 1px solid #525557;
+	height: 89px;
+	margin-left: 500px;
+	width: 335px;
+	resize: none;
+	font-size: 13px;
+	font-family: Monsterrant;
 }

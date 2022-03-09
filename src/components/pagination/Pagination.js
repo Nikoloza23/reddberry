@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
 import './pagination.css';
+import Routes from '../routes/Routes';
+import { SaveIndex } from '../../redux/action/index';
 import Next from '../../assets/Next.svg';
 import Previous from '../../assets/Previous.svg';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import Routes from '../routes/Routes';
-import { useDispatch, useSelector } from 'react-redux';
-import { SaveIndex } from '../../redux/action/index';
 
-const Pagination = ({ formRef }) => {
+const Pagination = ({ formRef, choosenSkills }) => {
 	const navigate = useNavigate();
-	const location = useLocation();
-	const { pathname } = useLocation();
-	const [choosenPage, setChoosenPage] = useState(0);
 	const dispatch = useDispatch();
+	const { pathname } = useLocation();
+	const location = useLocation();
+
+	const [choosenPage, setChoosenPage] = useState(0);
 	const ActivIndex = useSelector((state) => state.IndexSave);
 
 	useEffect(() => {
@@ -24,7 +26,7 @@ const Pagination = ({ formRef }) => {
 	};
 
 	const onNext = () => {
-		if (!formRef) navigate(Routes[choosenPage + 1]);
+		if (!formRef && choosenSkills.length !== 0) navigate(Routes[choosenPage + 1]);
 	};
 
 	const Pages = [
