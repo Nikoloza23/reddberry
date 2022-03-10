@@ -25,11 +25,13 @@
 	padding-top: 2px;
 	padding-right: 980px;
 	font-size: 20px;
+	margin-bottom: 10px;
 }
 
 .choosen_info {
 	position: relative;
 	margin-left: 300px;
+	margin-top: -10px;
 	font-style: italic;
 	color: #fe3b1f;
 	font-family: Montserrat;
