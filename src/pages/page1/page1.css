@@ -82,13 +82,16 @@ form#\31 {
 	flex-direction: column;
 }
 
-input.form-input {
+.invalidInput {
+	border: 1px solid #fe3b1f;
+}
+
+.form-input {
 	flex-direction: column;
 	margin: 15px;
 	padding-left: 30px;
 	height: 40px;
 	width: 350px;
-	border: 1px solid black;
 	font-family: Montserrat;
 	font-style: italic;
 	font-size: 20px;

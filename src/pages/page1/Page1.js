@@ -31,21 +31,19 @@ function Page1() {
 						<div className="form_container">
 							<div className="form_input">
 								<input
-									className="form-input"
-									type="text"
-									id="fname"
+									className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
 									name="fname"
 									placeholder="First Name"
 									{...register('first_name', { required: true, minLength: 2 })}
 								/>
 								<div className="errors">
-									{errors.first_name?.type === 'required' && '* first name is required'}
+									{errors?.first_name?.type === 'required' && '* first name is required'}
 									{errors.first_name?.type === 'minLength' && '*min 2 symbol'}
 								</div>
 							</div>
 							<div className="form_input">
 								<input
-									className="form-input"
+									className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
 									type="text"
 									id="lname"
 									name="lname"
@@ -60,7 +58,7 @@ function Page1() {
 							</div>
 							<div className="form_input">
 								<input
-									className="form-input"
+									className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
 									type="email"
 									id="email"
 									name="email"
@@ -75,7 +73,7 @@ function Page1() {
 							</div>
 							<div className="form_input">
 								<input
-									className="form-input"
+									className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
 									type="tel"
 									id="phone"
 									name="phone"
