@@ -100,7 +100,9 @@ function Page3() {
 									When?
 									<div className="form_input">
 										<input
-											className="form-input_5"
+											className={
+												errors.had_covid_at ? 'form-input_5 invalidInput' : 'form-input_5'
+											}
 											type="date"
 											{...register('had_covid_at', { required: true })}
 										/>
@@ -112,7 +114,7 @@ function Page3() {
 
 							<div className="errors_2">
 								{errors.had_covid?.type === 'required' && '* covid form is required '}
-								{errors.had_covid_at?.type === 'required' && '* when form is required '}
+								{errors?.had_covid_at?.type === 'required' && '* when form is required '}
 							</div>
 						</div>
 						<div className="text">Have you been vaccinated?</div>
@@ -146,8 +148,10 @@ function Page3() {
 										<div className="last">
 											When did you get your last covid vaccine?
 											<input
+												className={
+													errors.vaccinated_at ? 'form-input_7 invalidInput' : 'form-input_7'
+												}
 												type="date"
-												id="form-input_7"
 												{...register('vaccinated_at', { required: true })}
 											/>
 										</div>

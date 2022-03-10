@@ -13,7 +13,6 @@
 	left: 0;
 	background-color: #fff;
 }
-
 .rocketer_2 {
 	position: relative;
 	margin-top: -25px;
@@ -23,6 +22,11 @@
 	line-height: 100px;
 	font-size: 50px;
 }
+
+.invalidInput {
+	border: 1px solid #fe3b1f;
+}
+
 
 .errors_3 {
 	position: relative;

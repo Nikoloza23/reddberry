@@ -20,6 +20,15 @@
 	margin-top: 0.5rem;
 }
 
+.form_input {
+	width: 233px;
+	position: relative;
+}
+
+.invalidInput {
+	border: 1px solid #fe3b1f;
+}
+
 .lastToggled {
 	margin-bottom: 0px;
 }
@@ -138,8 +147,7 @@ input#form-input_3 {
 	font-family: Monsterrant;
 }
 
-input#form-input_7 {
-	border: 1px solid black;
+.form-input_7 {
 	width: 230px;
 	margin-bottom: 25px;
 	font-size: 18px;
@@ -148,7 +156,6 @@ input#form-input_7 {
 }
 
 .form-input_5 {
-	border: 1px solid black;
 	width: 230px;
 	font-size: 18px;
 	font-family: Monsterrant;
@@ -183,7 +190,6 @@ button.isTogled {
 	font-size: 18px;
 	font-family: Monsterrant;
 	color: #000000;
-	margin-bottom: 15px;
 }
 
 .reddbery_origin_3 {

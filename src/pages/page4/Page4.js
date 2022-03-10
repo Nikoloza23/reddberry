@@ -53,7 +53,7 @@ function Page4() {
 							</div>
 							<div className="about">What would you speak about at Devtalk?</div>
 							<textarea
-								className="txt"
+								className={errors.devtalk_topic ? "txt invalidInput" : "txt"}
 								placeholder="I would..."
 								{...register('devtalk_topic', { required: true })}
 							></textarea>
@@ -62,7 +62,7 @@ function Page4() {
 							</div>
 							<div className="txt_2">Tell us something special</div>
 							<textarea
-								className="txt_3"
+								className={errors.something_special ? "txt_3 invalidInput" : "txt_3"}
 								placeholder="I..."
 								{...register('something_special', { required: true })}
 							></textarea>

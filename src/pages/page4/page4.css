@@ -79,7 +79,6 @@
 .txt {
 	padding-left: 20px;
 	padding-top: 10px;
-	border: 1px solid #525557;
 	height: 122px;
 	width: 435px;
 	margin-left: 100px;
@@ -95,10 +94,13 @@
 	font-family: Monsterrant;
 }
 
+.invalidInput {
+	border: 1px solid #fe3b1f;
+}
+
 .txt_3 {
 	padding-left: 20px;
 	padding-top: 10px;
-	border: 1px solid #525557;
 	height: 89px;
 	width: 435px;
 	margin-left: 100px;

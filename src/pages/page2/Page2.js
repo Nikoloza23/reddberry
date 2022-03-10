@@ -59,7 +59,7 @@ function Page2() {
 
 							<div>
 								<input
-									className="duration"
+									className={errors.experience ? 'duration invalidInput' : 'duration'}
 									type="number"
 									min={0}
 									id="experience"
