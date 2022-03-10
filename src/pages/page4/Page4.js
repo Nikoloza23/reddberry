@@ -18,7 +18,6 @@ function Page4() {
 
 	const onFormSubmit = (data) => {
 		console.log(data);
-
 		navigate('/submitPage');
 	};
 

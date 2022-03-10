@@ -17,7 +17,7 @@
 	display: inline-block;
 	transition: transform 0.2s;
 	left: 250px;
-	cursor: none;
+	pointer-events: none;
 	top: 5px;
 }
 

@@ -36,10 +36,6 @@ function Page2() {
 		dispatch(addSkill({ ...data }));
 	};
 
-	// console.log('api skills', skills);
-	console.log('choosenSkills', choosenSkills);
-	console.log(skills);
-
 	return (
 		<div className="split_2">
 			<div className="splitleft">
