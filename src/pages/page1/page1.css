@@ -82,6 +82,11 @@ form#\31 {
 	flex-direction: column;
 }
 
+.input_container{
+	position: relative;
+	margin-left: -170px;
+}
+
 .invalidInput {
 	border: 1px solid #fe3b1f;
 }

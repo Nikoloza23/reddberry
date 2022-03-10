@@ -28,6 +28,7 @@ function Page1() {
 						<h1 className="rocketer">Hey, Rocketeer, what are you coordinates?</h1>
 					</div>
 					<form className="form" onSubmit={handleSubmit(onFormSubmit)} ref={formRef} id="1">
+						<div className="input_container">
 						<div className="form_container">
 							<div className="form_input">
 								<input
@@ -85,6 +86,7 @@ function Page1() {
 									{errors.phone?.type === 'pattern' && '* mobileNumber is include Geo format'}
 								</div>
 							</div>
+						</div>
 						</div>
 					</form>
 					<Pagination formRef={formRef} />
