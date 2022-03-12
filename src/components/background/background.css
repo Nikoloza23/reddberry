@@ -10,17 +10,20 @@
 	height: 100vh;
 }
 
+.start:hover {
+	transform: scale(1.2);
+}
+
+.sub:hover {
+	transform: scale(1.2);
+}
+
 .components > div {
 	width: fit-content;
 	display: flex;
 	align-items: center;
 	margin-top: 50px;
 	font-weight: 400;
-}
-
-audio.react-audio-player {
-	border-radius: 20px;
-	width: 100px;
 }
 
 .title {
@@ -30,6 +33,7 @@ audio.react-audio-player {
 	font-size: 70px;
 	line-height: 119px;
 	color: #fe3b1f;
+	margin-bottom: 30px;
 }
 
 img {

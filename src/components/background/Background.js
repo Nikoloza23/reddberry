@@ -13,9 +13,7 @@ function Background() {
 			<div className="components">
 				<div className="title">Welcome Rocketeer!</div>
 				<Link to="/firstPage" style={{ textDecoration: 'none' }}>
-					<div className="start" >
-						Start Questionarie
-					</div>
+					<div className="start">Start Questionarie</div>
 				</Link>
 				<div className="submited">
 					<Link to="/submited" style={{ textDecoration: 'none' }}>
