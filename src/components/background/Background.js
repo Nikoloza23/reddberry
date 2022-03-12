@@ -13,7 +13,7 @@ function Background() {
 			<div className="components">
 				<div className="title">Welcome Rocketeer!</div>
 				<Link to="/firstPage" style={{ textDecoration: 'none' }}>
-					<div className="start" src={Y2}>
+					<div className="start" >
 						Start Questionarie
 					</div>
 				</Link>
