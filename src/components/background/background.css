@@ -18,6 +18,11 @@
 	font-weight: 400;
 }
 
+audio.react-audio-player {
+    border-radius: 20px;
+    width: 100px;
+}
+
 .title {
 	width: 1000px;
 	height: 215px;

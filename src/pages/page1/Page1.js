@@ -29,64 +29,64 @@ function Page1() {
 					</div>
 					<form className="form" onSubmit={handleSubmit(onFormSubmit)} ref={formRef} id="1">
 						<div className="input_container">
-						<div className="form_container">
-							<div className="form_input">
-								<input
-									className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
-									name="fname"
-									placeholder="First Name"
-									{...register('first_name', { required: true, minLength: 2 })}
-								/>
-								<div className="errors">
-									{errors?.first_name?.type === 'required' && '* first name is required'}
-									{errors.first_name?.type === 'minLength' && '*min 2 symbol'}
+							<div className="form_container">
+								<div className="form_input">
+									<input
+										className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
+										name="fname"
+										placeholder="First Name"
+										{...register('first_name', { required: true, minLength: 2 })}
+									/>
+									<div className="errors">
+										{errors?.first_name?.type === 'required' && '* first name is required'}
+										{errors.first_name?.type === 'minLength' && '*min 2 symbol'}
+									</div>
+								</div>
+								<div className="form_input">
+									<input
+										className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
+										type="text"
+										id="lname"
+										name="lname"
+										placeholder="Last Name"
+										{...register('last_name', { required: true })}
+									/>
+									<div className="errors">
+										{errors.last_name?.type === 'required' && '* last name is required'}
+										{errors.last_name?.type === 'minLength' &&
+											'* last name should include 3 or more characters'}
+									</div>
+								</div>
+								<div className="form_input">
+									<input
+										className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
+										type="email"
+										id="email"
+										name="email"
+										placeholder="E Mail"
+										{...register('email', { required: true })}
+									/>
+									<div className="errors">
+										{errors.email?.type === 'required' && '* email is required'}
+										{errors.email?.type === 'email' &&
+											'*  email should include to meet the mail format '}
+									</div>
+								</div>
+								<div className="form_input">
+									<input
+										className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
+										type="tel"
+										id="phone"
+										name="phone"
+										placeholder="+995 5__ __ __ __"
+										{...register('phone', { required: true, pattern: /^\+[0-9]{3}[0-9]{9}/g })}
+									/>
+									<div className="errors">
+										{errors.phone?.type === 'required' && '* mobileNumber is required'}
+										{errors.phone?.type === 'pattern' && '* mobileNumber is include Geo format'}
+									</div>
 								</div>
 							</div>
-							<div className="form_input">
-								<input
-									className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
-									type="text"
-									id="lname"
-									name="lname"
-									placeholder="Last Name"
-									{...register('last_name', { required: true })}
-								/>
-								<div className="errors">
-									{errors.last_name?.type === 'required' && '* last name is required'}
-									{errors.last_name?.type === 'minLength' &&
-										'* last name should include 3 or more characters'}
-								</div>
-							</div>
-							<div className="form_input">
-								<input
-									className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
-									type="email"
-									id="email"
-									name="email"
-									placeholder="E Mail"
-									{...register('email', { required: true })}
-								/>
-								<div className="errors">
-									{errors.email?.type === 'required' && '* email is required'}
-									{errors.email?.type === 'email' &&
-										'*  email should include to meet the mail format '}
-								</div>
-							</div>
-							<div className="form_input">
-								<input
-									className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
-									type="tel"
-									id="phone"
-									name="phone"
-									placeholder="+995 5__ __ __ __"
-									{...register('phone', { required: true, pattern: /^\+[0-9]{3}[0-9]{9}/g })}
-								/>
-								<div className="errors">
-									{errors.phone?.type === 'required' && '* mobileNumber is required'}
-									{errors.phone?.type === 'pattern' && '* mobileNumber is include Geo format'}
-								</div>
-							</div>
-						</div>
 						</div>
 					</form>
 					<Pagination formRef={formRef} />
