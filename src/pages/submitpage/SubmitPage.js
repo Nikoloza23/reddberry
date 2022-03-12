@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import './submitpage.css';
 
 function SubmitPage() {
+	
 	return (
 		<div className="background_2">
 			<Link to="/thanksPage" style={{ textDecoration: 'none' }}>

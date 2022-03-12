@@ -22,7 +22,7 @@ function Background() {
 						<div className="sub">Submited Applications</div>
 					</Link>
 				</div>
-				<div>
+				<div id="pot">
 					<img className="rocket" src={rocketman} alt="/" />
 				</div>
 			</div>
