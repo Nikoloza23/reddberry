@@ -112,3 +112,16 @@ img {
 		transform: rotate(360deg);
 	}
 }
+
+@media (max-width: 1000px) {
+	.components {
+		max-height: 460px;
+	}
+	.title {
+		font-size: 45px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 10px;
+	}
+}
