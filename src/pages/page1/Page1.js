@@ -1,18 +1,18 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import Pagination from '../../components/pagination/Pagination';
 import './page1.css';
 
-import { ADD_IDENTITY } from "../redux/actions";
-import {identity} from '../../redux/selectors'
-
+import { ADD_IDENTITY } from '../../redux/action';
+import { identity } from '../../redux/selectors';
 
 function Page1() {
 	const formRef = useRef();
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
 	const identitySelectors = useSelector(identity);
 
 	const {
@@ -26,7 +26,6 @@ function Page1() {
 
 		navigate('/secondPage');
 	};
-
 
 	return (
 		<div className="all_container">
@@ -54,6 +53,7 @@ function Page1() {
 								</div>
 								<div className="form_input">
 									<input
+										defaultValue={identitySelectors?.last_name}
 										className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
 										type="text"
 										id="lname"
@@ -69,6 +69,7 @@ function Page1() {
 								</div>
 								<div className="form_input">
 									<input
+										defaultValue={identitySelectors?.email}
 										className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
 										type="email"
 										id="email"
@@ -84,6 +85,7 @@ function Page1() {
 								</div>
 								<div className="form_input">
 									<input
+										defaultValue={identitySelectors?.phone}
 										className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
 										type="tel"
 										id="phone"

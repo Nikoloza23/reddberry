@@ -30,6 +30,9 @@ const handleCart = (state = initialState, action) => {
 				IndexSave: [...state.IndexSave, action.payload],
 			};
 		}
+		case types.ADD_IDENTITY_TYPE: {
+			return { ...state, identity: action.payload };
+		  }
 
 		default:
 			return state;

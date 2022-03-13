@@ -22,7 +22,7 @@ export const SaveIndex = (index) => {
 };
 
 
-export const ADD_IDENTITY = data => ({
+export const ADD_IDENTITY = (data) => ({
 	type: types.ADD_IDENTITY_TYPE,
 	payload: data,
   });
