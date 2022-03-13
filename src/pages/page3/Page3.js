@@ -8,6 +8,9 @@ import { ADD_COVID } from '../../redux/action';
 import { covid_list } from '../../redux/selectors';
 import './page3.css';
 
+//third page where is not clean code
+//but still 100% funqtionally
+//here you can choose ways for work vaccinated and covid <3
 function Page3() {
 	const [radio, setRadio] = useState();
 	const [covid, setCovid] = useState();

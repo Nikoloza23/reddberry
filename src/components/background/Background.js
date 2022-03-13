@@ -4,6 +4,7 @@ import stars from '../../assets/stars.svg';
 import rocketman from '../../assets/rocketman.svg';
 import { Link } from 'react-router-dom';
 
+//home page (face)
 function Background() {
 	return (
 		<div className="background">

@@ -8,6 +8,9 @@ import { SaveIndex } from '../../redux/action/index';
 import Next from '../../assets/Next.svg';
 import Previous from '../../assets/Previous.svg';
 
+//may this is priority page because
+//with this funqcionally you can go-back on pages
+//will show you which page you are on now
 const Pagination = ({ formRef, choosenSkills }) => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();

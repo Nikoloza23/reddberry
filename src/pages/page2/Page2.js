@@ -7,7 +7,8 @@ import { reduxSkills } from '../../redux/selectors';
 
 import './page2.css';
 import Pagination from '../../components/pagination/Pagination';
-
+//skills page i know that it is not perfect
+//but still made perfect soon
 function Page2() {
 	const dispatch = useDispatch();
 	const choosenSkills = useSelector(reduxSkills);

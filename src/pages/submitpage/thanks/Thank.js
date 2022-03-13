@@ -2,13 +2,14 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './thank.css';
 
+//thanks page for answer questions
 function Thank() {
 	const navigate = useNavigate();
 
 	useEffect(() => {
 		setTimeout(() => {
 			navigate('/');
-		},  10000 );
+		}, 10000);
 	}, [navigate]);
 
 	return (

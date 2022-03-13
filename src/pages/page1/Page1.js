@@ -8,7 +8,7 @@ import './page1.css';
 
 import { ADD_IDENTITY } from '../../redux/action';
 import { identity } from '../../redux/selectors';
-
+//first page where you write about yourself
 function Page1() {
 	const formRef = useRef();
 	const navigate = useNavigate();

@@ -1,4 +1,4 @@
-import  { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,8 +7,10 @@ import Pagination from '../../components/pagination/Pagination';
 import './page4.css';
 
 import { ADD_EVENT } from '../../redux/action';
-import {event} from '../../redux/selectors'
+import { event } from '../../redux/selectors';
 
+//this is last page where you can introduce yourself
+//and answer questions
 function Page4() {
 	const [talk, setTalk] = useState();
 	const formRef = useRef();
@@ -23,7 +25,7 @@ function Page4() {
 	} = useForm();
 
 	const onFormSubmit = (data) => {
-        dispatch(ADD_EVENT(data))
+		dispatch(ADD_EVENT(data));
 
 		console.log(data);
 		navigate('/submitPage');
@@ -53,7 +55,7 @@ function Page4() {
 								className="checkbox"
 								type="radio"
 								value="false"
-								defaultChecked={eventSelectors?.will_organize_devtalk === "false"}
+								defaultChecked={eventSelectors?.will_organize_devtalk === 'false'}
 								onChange={(e) => setTalk(e.target.value)}
 								{...register('will_organize_devtalk', { required: true })}
 							/>

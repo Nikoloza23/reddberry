@@ -2,6 +2,7 @@ import React from 'react';
 import Background from '../components/background/Background';
 import StarfieldAnimation from 'react-starfield-animation';
 
+//pretty animation and home page (face)
 function Home() {
 	return (
 		<div>
