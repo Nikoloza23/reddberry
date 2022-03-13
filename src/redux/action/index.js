@@ -20,3 +20,10 @@ export const SaveIndex = (index) => {
 		payload: index,
 	};
 };
+
+
+export const ADD_IDENTITY = data => ({
+	type: types.ADD_IDENTITY_TYPE,
+	payload: data,
+  });
+  

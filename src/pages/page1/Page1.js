@@ -1,12 +1,19 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
 import Pagination from '../../components/pagination/Pagination';
 import './page1.css';
+
+import { ADD_IDENTITY } from "../redux/actions";
+import {identity} from '../../redux/selectors'
+
 
 function Page1() {
 	const formRef = useRef();
 	const navigate = useNavigate();
+	const identitySelectors = useSelector(identity);
 
 	const {
 		register,
@@ -15,10 +22,11 @@ function Page1() {
 	} = useForm();
 
 	const onFormSubmit = (data) => {
-		console.log(data);
+		dispatch(ADD_IDENTITY(data));
 
 		navigate('/secondPage');
 	};
+
 
 	return (
 		<div className="all_container">
@@ -32,6 +40,8 @@ function Page1() {
 							<div className="form_container">
 								<div className="form_input">
 									<input
+										id="first_name"
+										defaultValue={identitySelectors?.first_name}
 										className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
 										name="fname"
 										placeholder="First Name"

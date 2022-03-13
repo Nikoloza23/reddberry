@@ -8,7 +8,7 @@ function Thank() {
 	useEffect(() => {
 		setTimeout(() => {
 			navigate('/');
-		}, 3000);
+		},  10000 );
 	}, [navigate]);
 
 	return (
