@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
-import Pagination from '../../components/pagination/Pagination';
-import './page4.css';
-import { useRef } from 'react';
+import  { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
+import Pagination from '../../components/pagination/Pagination';
+import './page4.css';
+
+import { ADD_EVENT } from '../../redux/action';
+import {event} from '../../redux/selectors'
 
 function Page4() {
 	const [talk, setTalk] = useState();
 	const formRef = useRef();
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
+	const eventSelectors = useSelector(event);
 
 	const {
 		register,
@@ -17,6 +23,8 @@ function Page4() {
 	} = useForm();
 
 	const onFormSubmit = (data) => {
+        dispatch(ADD_EVENT(data))
+
 		console.log(data);
 		navigate('/submitPage');
 	};
@@ -35,7 +43,8 @@ function Page4() {
 							<input
 								className="checkbox"
 								type="radio"
-								value="Yes"
+								value="true"
+								defaultChecked={eventSelectors?.will_organize_devtalk === 'true'}
 								onChange={(e) => setTalk(e.target.value)}
 								{...register('will_organize_devtalk', { required: true })}
 							/>
@@ -43,7 +52,8 @@ function Page4() {
 							<input
 								className="checkbox"
 								type="radio"
-								value="Yes"
+								value="false"
+								defaultChecked={eventSelectors?.will_organize_devtalk === "false"}
 								onChange={(e) => setTalk(e.target.value)}
 								{...register('will_organize_devtalk', { required: true })}
 							/>
@@ -53,8 +63,9 @@ function Page4() {
 							</div>
 							<div className="about">What would you speak about at Devtalk?</div>
 							<textarea
-								className={errors.devtalk_topic ? "txt invalidInput" : "txt"}
+								className={errors.devtalk_topic ? 'txt invalidInput' : 'txt'}
 								placeholder="I would..."
+								defaultValue={eventSelectors?.devtalk_topic}
 								{...register('devtalk_topic', { required: true })}
 							></textarea>
 							<div className="errors_2">
@@ -62,8 +73,9 @@ function Page4() {
 							</div>
 							<div className="txt_2">Tell us something special</div>
 							<textarea
-								className={errors.something_special ? "txt_3 invalidInput" : "txt_3"}
+								className={errors.something_special ? 'txt_3 invalidInput' : 'txt_3'}
 								placeholder="I..."
+								defaultValue={eventSelectors?.something_special}
 								{...register('something_special', { required: true })}
 							></textarea>
 							<div className="errors_2">

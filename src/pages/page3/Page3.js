@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
-import Pagination from '../../components/pagination/Pagination';
-import './page3.css';
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
+import Pagination from '../../components/pagination/Pagination';
+import { ADD_COVID } from '../../redux/action';
+import { covid_list } from '../../redux/selectors';
+import './page3.css';
 
 function Page3() {
 	const [radio, setRadio] = useState();
@@ -13,6 +16,9 @@ function Page3() {
 	const [lastToggled, setLastToggled] = useState(false);
 	const formRef = useRef();
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
+
+	const covidSelectors = useSelector(covid_list);
 
 	const changeToggle = (x) => {
 		setIsToggled(x);
@@ -25,6 +31,7 @@ function Page3() {
 	} = useForm();
 
 	const onFormSubmit = (data) => {
+		dispatch(ADD_COVID(data));
 		console.log(data);
 
 		navigate('/fourthPage');
@@ -46,7 +53,8 @@ function Page3() {
 							<input
 								className="checkbox"
 								type="radio"
-								value="From Sairme Office"
+								value="from_office"
+								defaultChecked={covidSelectors?.work_preference === 'from_office'}
 								onChange={(e) => setRadio(e.target.value)}
 								{...register('work_preference', { required: true })}
 							/>
@@ -54,7 +62,8 @@ function Page3() {
 							<input
 								className="checkbox"
 								type="radio"
-								value="From Home"
+								value="from_home"
+								defaultChecked={covidSelectors?.work_preference === 'from_home'}
 								onChange={(e) => setRadio(e.target.value)}
 								{...register('work_preference', { required: true })}
 							/>
@@ -63,7 +72,8 @@ function Page3() {
 								className="checkbox"
 								type="radio"
 								name="radio"
-								value="Hybrid"
+								value="hybrid"
+								defaultChecked={covidSelectors?.work_preference === 'hybrid'}
 								{...register('work_preference', { required: true })}
 							/>
 							<div className="change">Hybrid</div>
@@ -78,6 +88,7 @@ function Page3() {
 									className="checkbox_2"
 									type="radio"
 									value="true"
+									defaultChecked={covidSelectors?.had_covid === 'true'}
 									onChange={(e) => setCovid(e.target.value)}
 									{...register('had_covid', { required: true })}
 								/>
@@ -89,6 +100,7 @@ function Page3() {
 										className="checkbox_3"
 										type="radio"
 										value="false"
+										defaultChecked={covidSelectors?.had_covid === 'false'}
 										onChange={(e) => setCovid(e.target.value)}
 										{...register('had_covid', { required: true })}
 									/>
@@ -100,6 +112,7 @@ function Page3() {
 									When?
 									<div className="form_input">
 										<input
+											defaultValue={covidSelectors?.had_covid_at}
 											className={
 												errors.had_covid_at ? 'form-input_5 invalidInput' : 'form-input_5'
 											}
@@ -124,6 +137,7 @@ function Page3() {
 									className="checkbox_2"
 									type="radio"
 									value="true"
+									defaultChecked={covidSelectors?.vaccinated === 'true'}
 									onChange={(e) => setDone(e.target.value)}
 									{...register('vaccinated', { required: true })}
 								/>
@@ -135,6 +149,7 @@ function Page3() {
 										className="checkbox_4"
 										type="radio"
 										value="false"
+										defaultChecked={covidSelectors?.vaccinated === 'false'}
 										onChange={(e) => setDone(e.target.value)}
 										{...register('vaccinated', { required: true })}
 									/>
@@ -148,6 +163,7 @@ function Page3() {
 										<div className="last">
 											When did you get your last covid vaccine?
 											<input
+												defaultChecked={covidSelectors?.vaccinated_at}
 												className={
 													errors.vaccinated_at ? 'form-input_7 invalidInput' : 'form-input_7'
 												}

@@ -32,7 +32,15 @@ const handleCart = (state = initialState, action) => {
 		}
 		case types.ADD_IDENTITY_TYPE: {
 			return { ...state, identity: action.payload };
-		  }
+		}
+
+		case types.ADD_COVID_TYPE: {
+			return { ...state, covid_list: action.payload };
+		}
+
+		case types.ADD_EVENT_TYPE: {
+			return { ...state, event: action.payload };
+		}
 
 		default:
 			return state;

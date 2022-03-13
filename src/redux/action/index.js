@@ -27,3 +27,13 @@ export const ADD_IDENTITY = (data) => ({
 	payload: data,
   });
   
+
+export const ADD_COVID = (data) => ({
+	type: types.ADD_COVID_TYPE,
+	payload: data
+})
+
+export const ADD_EVENT = (data) => ({
+	type: types.ADD_EVENT_TYPE,
+	payload: data
+})
