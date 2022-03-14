@@ -55,7 +55,7 @@ function Page1() {
 								<div className="form_input">
 									<input
 										defaultValue={identitySelectors?.last_name}
-										className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
+										className={errors.last_name ? 'form-input invalidInput' : 'form-input'}
 										type="text"
 										id="lname"
 										name="lname"
@@ -71,7 +71,7 @@ function Page1() {
 								<div className="form_input">
 									<input
 										defaultValue={identitySelectors?.email}
-										className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
+										className={errors.email ? 'form-input invalidInput' : 'form-input'}
 										type="email"
 										id="email"
 										name="email"
@@ -87,7 +87,7 @@ function Page1() {
 								<div className="form_input">
 									<input
 										defaultValue={identitySelectors?.phone}
-										className={errors.first_name ? 'form-input invalidInput' : 'form-input'}
+										className={errors.phone ? 'form-input invalidInput' : 'form-input'}
 										type="tel"
 										id="phone"
 										name="phone"
