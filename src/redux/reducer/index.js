@@ -42,29 +42,6 @@ const handleCart = (state = initialState, action) => {
 		case types.ADD_EVENT_TYPE: {
 			return { ...state, event: action.payload };
 		}
-		case types.UPLOAD_DATA_TYPE: {
-			const redberry = `https://bootcamp-2022.devtest.ge/api/application`;
-			axios({
-				method: 'post',
-				responseType: 'json',
-				url: `${redberry}`,
-				token: `76b7a03c-8b10-4447-8c24-985c5874adef`,
-				data: {
-					...state.identity,
-					skills: state.skills,
-					...state.covid_list,
-					...state.event,
-				},
-			})
-				.then((res) => console.log('server response', res))
-				.catch((error) => console.log('server response', error));
-			return {
-				identity: {},
-				skills: [],
-				covid: {},
-				event: {},
-			};
-		}
 		default:
 			return state;
 	}

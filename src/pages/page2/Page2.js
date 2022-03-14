@@ -60,7 +60,7 @@ function Page2() {
 
 							<div>
 								<input
-									className={errors.experience ? 'duration invalidInput' : 'duration'}
+									className={errors.experience ? 'input invalidInput' : 'input'}
 									type="number"
 									min={0}
 									id="experience"
@@ -71,7 +71,9 @@ function Page2() {
 									{errors.experience?.type === 'required' && '* experience is required '}
 								</div>
 							</div>
-							<button className="add_duration">Add Programming Language</button>
+							<button className="add_duration" type="submit">
+								Add Programming Language
+							</button>
 						</form>
 					</div>
 

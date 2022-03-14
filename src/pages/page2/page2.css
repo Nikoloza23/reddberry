@@ -23,6 +23,8 @@
 	font-size: 50px;
 }
 
+
+
 .invalidInput {
 	border: 1px solid #fe3b1f;
 }
@@ -153,9 +155,10 @@
 input#experience {
 	width: 350px;
 	height: 35px;
-	border: 1px solid black;
 	font-size: 18px;
+	font-style: italic;
 	font-family: Monsterrant;
+	padding-left: 20px;
 }
 
 .form-input_4 {
