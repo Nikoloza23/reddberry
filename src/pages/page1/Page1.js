@@ -24,6 +24,7 @@ function Page1() {
 	const onFormSubmit = (data) => {
 		dispatch(ADD_IDENTITY(data));
 
+		console.log(data);
 		navigate('/secondPage');
 	};
 

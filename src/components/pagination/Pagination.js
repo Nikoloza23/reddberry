@@ -60,7 +60,7 @@ const Pagination = ({ formRef, choosenSkills }) => {
 		<div className="circle_container">
 			{Pages.map((el, i) => {
 				return (
-					<div key={i} className={i === ActivIndex[i] ? 'Active' : ''}>
+					<div  key={i} className={i === ActivIndex[i] ? 'Active' : ''}>
 						<Link to={el.path} className={'Eventnone'} onClick={(e) => e.preventDefault()}>
 							<span className="dot"></span>
 						</Link>
