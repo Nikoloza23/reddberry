@@ -1,5 +1,4 @@
 import * as types from '../actiontypes';
-import axios from 'axios';
 
 const initialState = {
 	identity: {},
